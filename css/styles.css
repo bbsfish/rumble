@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
 html,
 body {
     width: 100%;
@@ -7,8 +9,8 @@ body {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    font-family: 'Dela Gothic One', cursive;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Ubuntu Condensed', sans-serif, cursive;
     background-color: #282828;
     color: #d3d3d3;
     /* webkit-tap-highlight-color: #222; */
@@ -356,19 +358,25 @@ textarea {
     margin-top: 0;
 }
 
-.feature {
+.highlights img {
+    width: 270px;
+    height: 180px;
+}
+
+.highlights {
     margin: 50px auto 0;
     max-width: 400px;
 }
 
 @media(min-width:992px) {
-    .feature {
+    .highlights {
         margin: 20px auto 0;
     }
 }
 
-.feature p {
+.highlights p {
     margin-bottom: 0;
+    font-family: 'Ubuntu Condensed';
 }
 
 .call-to-action h2 {
