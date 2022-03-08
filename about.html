@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/styleplus.css" />
+    <link rel="stylesheet" href="./css/about-style.css" />
   </head>
   <body>
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
@@ -42,51 +43,54 @@
                         <a class="page-scroll" href="shop.html">Shop</a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="about.html">About</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <!-- <h1 class="category-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                    <h2 class="margin-top-0 text-primary">GALLERY</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-    </h1> -->
+
     <section>
-        <div class="container">
+        <!-- Information -->
+        <div class="container" id="information">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="margin-top-0 text-primary">GALLERY</h2>
+                    <h2 class="margin-top-0 text-primary">INFORMATION</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 text-center">
-                    <div class="gallery">
-                        <!-- highlights img = 360px x 240px -->
-                        <img src="./assets/beach.jpg" />
-                        <h3>Title</h3>
-                        <p class="text-muted">Description</p>
+                <div class="col-lg-12 col-md-12 text-left about-element" id="developpers">
+                        <h2>Developpers</h2>
+                        <p>Hello everyone</p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 text-center">
-                    <div class="gallery">
-                        <img src="https://blog.esrij.com/arcgisblog/wp-content/uploads/2018/10/1-1.png" />
-                        <h3>For the world end</h3>
-                        <p class="text-muted">Are you ready for new space?</p>
-                    </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="container" id="about">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="margin-top-0 text-primary">ABOUT</h2>
+                    <hr class="primary">
                 </div>
-                <div class="col-lg-6 col-md-6 text-center">
-                    <div class="gallery">
-                        <!-- <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i> -->
-                        <img src="https://artna.jp/wp-content/uploads/2019/07/art-of-europe06-680x453.jpg" />
-                        <h3>New releace</h3>
-                        <p class="text-muted">Enjoy his new theme</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-left about-element" id="contactus">
+                        <h2>Contact Us</h2>
+                        <form class="contactform" method="post">
+                            <li><label>Name</label><input type="text" name="yourname" placeholder="Enter your name*"></li>
+                            <li><label>Mail</label><input type="text" name="yourmailadress" placeholder="Enter your Email adress*"></li>
+                            <li><label>Content</label><textarea name="content"></textarea></li>
+                            <li class="btn"><input type="submit" name="submit" value="Send"></li>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -98,13 +102,13 @@
                 <div class="col-xs-6 col-sm-4 column">
                     <h4>Information</h4>
                     <ul class="list-unstyled">
-                        <li><a href="developpers.html">Developers</a></li>
+                        <li><a href="about.html#developpers">Developers</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-6 col-sm-4 column">
                     <h4>About</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="about.html#contactus">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 column">

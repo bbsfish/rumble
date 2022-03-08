@@ -18,3 +18,7 @@
     width: 100%;
     height: 100%;
 }
+
+.activetab {
+    color: #9c27b0 !important;
+}
