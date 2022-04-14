@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-size: 16px;
+}
+
+li {
+  text-decoration: none;
+  list-style-type:none;
+}
+
+a {
+  text-decoration: none;
+  list-style-type:none;
+  color: white;
+}
+
+body {
+  width: 100%;
+  min-width: 360px;
+  font-family: 'Ubuntu Condensed', sans-serif, cursive;
+}
+
+:root {
+  --h-base-color: rgb(119, 119, 119);
+  --h-nav-list-active: rgb(89, 37, 134);
+  --h-nav-bg: rgb(40, 40, 40);
+  --m-header-main: rgb(162, 162, 162);
+  --m-tmlist-pg-active: rgb(96, 96, 96);
+  --m-bgcolor-1: #222;
+  --base-white: aliceblue;
+}
+
+img {
+  width: 150px;
+}
+
+/* header */
+header {
+  width: 100%;
+  text-align: center;
+  color: var(--base-white);
+}
+.header-nav {
+  width: 100%;
+  background-color: var(--h-nav-bg);
+  display: flex;
+}
+
+.header-body {
+  width: 100%;
+}
+
+/* header logo */
+.h-logo {
+  width: 80px;
+  height: 40px;
+}
+
+.h-logo a {
+  font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
+  display: block;
+  width: 120px;
+  height: 40px;
+  color: var(--h-nav-list-active);
+  position: relative;
+}
+
+.h-logo a span:first-child {
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  font-size: 19px;
+}
+.h-logo a span:last-child {
+  position: absolute;
+  left: 24.4px;
+  top: 17.5px;
+  font-size: 17px;
+}
+
+/* header nav */
+.h-nav-list-center ul {
+  width: 270px;
+  display: flex;
+}
+
+.h-nav-list-item {
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+.h-nav-list-item a {
+  display: block;
+  color: var(--base-white);
+  width: 100%;
+  height: 100%;
+}
+.h-nav-list-item a:hover {
+  color: var(--h-nav-list-active) !important;
+  /* transition-delay: 0.3s; */
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+.h-nav-list-right {
+  width: 90px;
+  height: 40px;
+  margin-left: auto;
+}
+.h-nav-list ul {
+  display: flex;
+}
+
+.h-nav-list ul li { 
+  width: 80px;
+  height: 40px;
+}
+
+.h-nav-list:last-child {
+  margin-left:auto;
+}
+
+.h-nav-list-active {
+  color: var(--h-nav-list-active) !important;
+}
+
+/* footer */
+footer {
+  background-color: var(--m-bgcolor-1);
+  width: 100%;
+  height: 110px;
+  position: relative;
+}
+@media(max-width: 768px) {
+  footer{
+    height: 150px;
+    position: relative;
+  }
+  footer nav:first-child(2){
+    position: absolute;
+    top: 0;
+  }
+  footer nav:nth-child(2){
+    position: absolute;
+    top: 70px;
+  }
+  footer nav:last-child {
+    display: block;
+    width: 40vw;
+    padding: 5px 10px;
+    float: right;
+  }
+}
+footer nav {
+  display: block;
+  float: left;
+  width: 20vw;
+  min-width: 150px;
+  padding: 5px 10px;
+}
+footer nav:last-child {
+  display: block;
+  width: 20vw;
+  min-width: 110px;
+  max-width: 200px;
+  position: absolute;
+  right: 20px;
+}
+footer h4 {
+  border-bottom: var(--base-white) solid 1px;
+  font-size: 20px;
+  color: var(--h-nav-list-active);
+  margin-bottom: 10px;
+  width: 100%;
+}
+footer.f-list-unstyled li a{
+  font-size: 15px;
+  color: var(--base-white);
+}
+/* follow btn */
+.follow-me {
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  background-color: #eee;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #333;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  height: 44px; /* Button height */
+  line-height: 44px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 44px; /* Button width */
+}
+.follow-me li a:hover::before {
+  color: #fff;
+  background-color: rgb(83, 83, 83);
+}
+.follow-me li a[href*="twitter.com"]::before { content: "\f099"; }
+.follow-me li a[href*="instagram.com"]::before { content: "\f16d"; }
+
+/* hr */
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 120px;
+  margin: auto;
+  margin-bottom: 20px;
+}
