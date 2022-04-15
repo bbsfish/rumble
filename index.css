@@ -63,13 +63,21 @@ section {
   height: 320px;
   width: 100%;
   white-space: nowrap;
-  /* overflow: scroll; */
+  overflow: scroll;
   text-align: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
 }
-@media(max-width: 768px) {
-  .img-list {
-    overflow: scroll;
-  }
+.img-list::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
+}
+.img-list:hover {
+  -ms-overflow-style: auto;    /* IE, Edge 対応 */
+  scrollbar-width: auto;       /* Firefox 対応 */
+}
+.img-list::-webkit-scrollbar:hover {  /* Chrome, Safari 対応 */
+  display:auto;
 }
 .img-list a{
   display: inline-block;
