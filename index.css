@@ -37,6 +37,7 @@
   transition-timing-function: ease-in;
   transition-duration: 0.2s;
 }
+
 /* section */
 section {
   background-color: var(--m-bgcolor-1);
