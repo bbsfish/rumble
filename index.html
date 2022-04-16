@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="header_mb.css" type="text/css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="header_dt.css" type="text/css" media="screen and (min-width: 769px)">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <title>PANMry Works</title>
 </head>
 <body>
@@ -24,23 +25,26 @@
       <nav class="h-nav-list h-nav-list-right"><ul>
         <li class="h-nav-list-item"><a href="about.html">about</a></li>
       </ul></nav>
-    </div>
-    <!-- barger btn -->
-    <label for="menu_btn_check" class="barger-menu-btn"><span></span></label>
-    <!-- barger menu -->
-    <div class="barger-menu" id="barger-menu"><ul>
-      <li class="h-nav-list-item"><a href="index.html#intro" class="h-nav-list-active">intro</a></li>
-      <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
-      <li class="h-nav-list-item"><a href="works.html">works</a></li>
-      <li class="h-nav-list-item"><a href="about.html">about</a></li>
-    </ul></div>
-    <div class="header-body">
-      <h1>Make the world tremendous</h1>
-      <a href="#intro">Get Started</a>
+      <!-- barger menu -->
+      <div class="barger-menu">
+        <!-- barger btn -->
+        <label for="barger-menu-list" class="barger-menu-btn" id="barger-menu-btn"><span></span></label>
+        <!-- barger list -->
+        <div class="barger-menu-list" id="barger-menu-list"><ul>
+          <li class="h-nav-list-item"><a href="index.html#intro" class="h-nav-list-active">intro</a></li>
+          <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
+          <li class="h-nav-list-item"><a href="works.html">works</a></li>
+          <li class="h-nav-list-item"><a href="about.html">about</a></li>
+        </ul></div>
+      </div>
     </div>
   </header>
   <!-- main -->
   <main>
+    <div class="m-header">
+      <h1>Make the world tremendous</h1>
+      <a href="#intro">Get Started</a>
+    </div>
     <!-- #intro -->
     <section class="m-sections" id="intro">
       <h2>INTRODUCE</h2>
@@ -80,5 +84,6 @@
       </ul>
     </nav>
   </footer>
+  <script src="menu.js"></script>
 </body>
 </html>

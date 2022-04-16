@@ -9,15 +9,15 @@ header {
   width: 100%;
   height: 50px;
   background-color: var(--h-nav-bg);
+  position: fixed;
 }
-.header-body {
-  width: 100%;
-}
-
 /* header logo */
 .h-logo {
-  width: 105px;
+  width: 100vw;
   height: 50px;
+  background-color: var(--h-nav-bg);
+  position: absolute;
+  z-index: 5000;
 }
 
 .h-logo a {
@@ -48,15 +48,24 @@ header {
 }
 
 /* header humberger */
+/* barger menu content */
 .barger-menu {
-  display: none;
+  position: relative;
+}
+#barger-menu-list {
   position: absolute;
-  top: 50px;
+  z-index: 1000;
+  top: -250px;
   border-top: 1px solid var(--base-white);
   background-color: var(--h-nav-bg);
-  width: calc(100vw + 1px);
+  width: 100%;
+  transition: all 0.6s;
 }
-.barger-menu ul li, .barger-menu ul li a {
+#barger-menu-list.panelactive {
+  /* top: calc(50px - 100vh); */
+  top: 50px;
+}
+#barger-menu-list ul li, #barger-menu-list ul li a {
   font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
   text-transform: uppercase;
   line-height: 40px;
@@ -66,11 +75,14 @@ header {
   margin-left: 10px;
   font-size: 14px;
 }
-.barger-menu ul li:last-child {
+#barger-menu-list ul li:last-child {
   margin-top: 20px;
 }
-.barger-menu-btn {
-  position: absolute;
+
+/* barger menu btn */
+#barger-menu-btn {
+  position: fixed;
+  z-index: 6000;
   top: 4px;
   right: 10px;
   display: flex;
@@ -78,12 +90,12 @@ header {
   width: 40px;
   justify-content: center;
   align-items: center;
-  z-index: 90;
   background-color: rgba(0, 0, 0,.2);
 }
-.barger-menu-btn span,
-.barger-menu-btn span:before,
-.barger-menu-btn span:after {
+#barger-menu-btn span,
+#barger-menu-btn span:before,
+#barger-menu-btn span:after {
+  position: fixed;
   content: "";
   display: block;
   height: 4px;
@@ -92,9 +104,9 @@ header {
   background-color: var(--base-white);
   position: absolute;
 }
-.barger-menu-btn span:before {
+#barger-menu-btn span:before {
   bottom: 8px;
 }
-.barger-menu-btn span:after {
+#barger-menu-btn span:after {
   top: 8px;
 }
