@@ -11,6 +11,12 @@ header {
   background-color: var(--h-nav-bg);
   position: fixed;
 }
+
+.h-nav-list-active {
+  color: var(--h-nav-list-active) !important;
+  font-size: 20px !important;
+}
+
 /* header logo */
 .h-logo {
   width: 100vw;
@@ -62,7 +68,6 @@ header {
   transition: all 0.6s;
 }
 #barger-menu-list.panelactive {
-  /* top: calc(50px - 100vh); */
   top: 50px;
 }
 #barger-menu-list ul li, #barger-menu-list ul li a {
