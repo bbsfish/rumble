@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/com.css" />
-  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
@@ -31,43 +31,100 @@
         <label for="barger-menu-list" class="barger-menu-btn" id="barger-menu-btn"><span></span></label>
         <!-- barger list -->
         <div class="barger-menu-list" id="barger-menu-list"><ul>
-          <li class="h-nav-list-item"><a href="index.html#intro" class="h-nav-list-active">intro</a></li>
+          <li class="h-nav-list-item"><a href="index.html#intro">intro</a></li>
           <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
           <li class="h-nav-list-item"><a href="works.html">works</a></li>
-          <li class="h-nav-list-item"><a href="about.html">about</a></li>
+          <li class="h-nav-list-item"><a href="about.html" class="h-nav-list-active">about</a></li>
         </ul></div>
       </div>
     </div>
   </header>
   <!-- main -->
   <main>
+    <div class="m-header-hidden"></div>
     <!-- #intro -->
     <section class="m-sections">
       <h2>ABOUT</h2>
       <hr>
-      <p class="description">introduce text</p>
-    </section>
-    <!-- #highlights -->
-    <section class="m-sections" id="highlights">
-      <h2>HIGHLIGHTS</h2>
-      <hr>
-      <div class="img-list">
-        <a href="index.html"><img src="./assets/painting_01.jpeg"><p>New releace</p></a>
-        <a href="index.html"><img src="./assets/painting_01.jpeg"><p>New releace</p></a>
-        <a href="index.html"><img src="./assets/painting_01.jpeg"><p>New releace</p></a>
+      <div class="sub-sections">
+        <h3 class="sub-sections-header">Abstract</h3>
+        <hr class="sub-hr">
+        <!-- Developpers -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dd>
+            <p>Person 1</p>
+            <p>Person 2</p>
+            <p>Person 3</p>
+            <p>Person 4</p>
+          </dd>
+        </dl>
+        <!-- Developpers -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dd>
+            <p>Person 1</p>
+            <p>Person 2</p>
+            <p>Person 3</p>
+            <p>Person 4</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="sub-sections">
+        <h3 class="sub-sections-header">Details</h3>
+        <hr class="sub-hr">
+        <!-- Contact Us -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>Contact Us</dt>
+          <dd>
+            <div class="form01 contact_us_form">
+              <form method="post" action="mail.php">
+              <ul class="formTable">
+                <li>
+                  <p class="title"><em>ご用件<span>必須</span></em></p>
+                  <div class="box_det"><select name="ご用件">
+                      <option selected disabled>選択してください</option>
+                      <option value="作品について">作品に関する問い合わせ</option>
+                      <option value="その他">その他の問い合わせ</option>
+                    </select></td>
+                </li>
+                <li>
+                  <p class="title"><em>お名前<span>必須</span></em></p>
+                  <div class="box_det"><input size="20" type="text" class="wide" name="お名前" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>Email (半角)<span>必須</span></em></p>
+                  <div class="box_det"><input size="30" type="text" class="wide" name="Email" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>電話番号 (半角)</em></p>
+                  <div class="box_det"><input size="30" type="text" class="wide" name="Email" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>お問い合わせ内容</em></p>
+                  <div class="box_det"><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></div>
+                </li>
+              </ul>
+              <p class="btn">
+                  <span><input type="submit" value="確認" /></span>
+              </p>
+            </form>
+            </div>
+          </dd>
+        </dl>
       </div>
     </section>
   </main>
   <!-- footer -->
   <footer>
     <nav class="f-nav-left">
-      <h4>Information</h4>
+      <h4>Abstract</h4>
       <ul class="f-list-unstyled">
-        <li><a rel="nofollow" href="">Developper</a></li>
+        <li><a rel="nofollow" href="">Developpers</a></li>
       </ul>
     </nav>
     <nav class="f-nav-left">
-      <h4>About</h4>
+      <h4>Details</h4>
       <ul class="f-list-unstyled">
         <li><a rel="nofollow" href="contact.html">Contact Us</a></li>
       </ul>
@@ -81,5 +138,13 @@
     </nav>
   </footer>
   <script src="menu.js"></script>
+  <script>
+    $(function(){
+      $('.toggle_title').click(function(){
+        $(this).toggleClass('selected');
+        $(this).next().slideToggle();
+      });
+    });
+  </script>
 </body>
 </html>
