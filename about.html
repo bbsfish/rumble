@@ -14,6 +14,7 @@
 </head>
 <body>
   <!-- header -->
+  <!-- %#HEADER% -->
   <header>
     <div class="header-nav">
       <h1 class="h-logo"><a href="./index.html"><span>PANMry</span><span>Works</span></a></h1>
@@ -39,6 +40,7 @@
       </div>
     </div>
   </header>
+  <!-- %#HEADER_END% -->
   <!-- main -->
   <main>
     <div class="m-header-hidden"></div>
@@ -51,22 +53,22 @@
         <hr class="sub-hr">
         <!-- Developpers -->
         <dl class="toggle_contents">
-          <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
-          <dd>
-            <p>Person 1</p>
-            <p>Person 2</p>
-            <p>Person 3</p>
-            <p>Person 4</p>
+          <dt class="toggle_title" id="developpers"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dd class="bordered">
+            <p>・Person 1</p>
+            <p>・Person 2</p>
+            <p>・Person 3</p>
+            <p>・Person 4</p>
           </dd>
         </dl>
         <!-- Developpers -->
         <dl class="toggle_contents">
           <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
-          <dd>
-            <p>Person 1</p>
-            <p>Person 2</p>
-            <p>Person 3</p>
-            <p>Person 4</p>
+          <dd class="bordered">
+            <p>・Person 1</p>
+            <p>・Person 2</p>
+            <p>・Person 3</p>
+            <p>・Person 4</p>
           </dd>
         </dl>
       </div>
@@ -75,8 +77,9 @@
         <hr class="sub-hr">
         <!-- Contact Us -->
         <dl class="toggle_contents">
-          <dt class="toggle_title"><span class="toggle_btn">開く</span>Contact Us</dt>
-          <dd>
+          <dt class="toggle_title" id="contactus"><span class="toggle_btn">開く</span>Contact Us</dt>
+          <!-- post form: disabled -->
+          <!-- <dd>
             <div class="form01 contact_us_form">
               <form method="post" action="mail.php">
               <ul class="formTable">
@@ -110,33 +113,40 @@
               </p>
             </form>
             </div>
+          </dd> -->
+          <!-- altitude contact method -->
+          <dd class="bordered">
+            <p>ご意見・お問い合わせは、下記までお願いします。</p>
+            <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;ysk1122.dev@gmail.com</p>
           </dd>
         </dl>
       </div>
     </section>
   </main>
   <!-- footer -->
-  <footer>
-    <nav class="f-nav-left">
-      <h4>Abstract</h4>
-      <ul class="f-list-unstyled">
-        <li><a rel="nofollow" href="">Developpers</a></li>
-      </ul>
-    </nav>
-    <nav class="f-nav-left">
-      <h4>Details</h4>
-      <ul class="f-list-unstyled">
-        <li><a rel="nofollow" href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <nav class="f-nav-right">
-      <h4>Follow</h4>
-      <ul class="follow-me">
-        <li><a href="https://twitter.com/" id="twttr"></a></li>
-        <li><a href="https://www.instagram.com/" id="insta"></a></li>
-      </ul>
-    </nav>
-  </footer>
+  <!-- %#FOOTER% -->
+<footer>
+  <nav class="f-nav-left">
+    <h4>Abstract</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#developpers">Developper</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-left">
+    <h4>Details</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#contactus">Contact Us</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-right">
+    <h4>Follow</h4>
+    <ul class="follow-me">
+      <li><a href="https://twitter.com/" id="twttr"></a></li>
+      <li><a href="https://www.instagram.com/" id="insta"></a></li>
+    </ul>
+  </nav>
+</footer>
+  <!-- %#FOOTER_END% -->
   <script src="menu.js"></script>
   <script>
     $(function(){

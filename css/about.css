@@ -78,6 +78,17 @@ section {
   margin-bottom: 15px;
 }
 
+.toggle_contents p {
+  color: var(--base-white);
+  font-size: 1.2em;
+}
+
+.bordered {
+  border: 1px solid var(--h-nav-list-active);
+  border-radius: 5px;
+  padding: 15px;
+}
+
 /* form css (source: https://www.legit.co.jp/contact_css/17931) */
 em{
   font-style:normal;
