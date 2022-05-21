@@ -117,3 +117,15 @@ section {
     float: left;
   }
 }
+
+.more_btn {
+  display: none;
+  width: 150px;
+  height: 30px;
+  font-size: 1.0em;
+  color: var(--base-white);
+  /* background-color: red; */
+  text-align: center;
+  margin-left: calc((100% - 150px) / 2);
+  border: 1px solid;
+}

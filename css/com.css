@@ -21,6 +21,17 @@ a {
   color: white;
 }
 
+button{
+  /* button reset */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+
 body {
   width: 100%;
   font-family: 'Ubuntu Condensed', sans-serif, cursive;
@@ -32,7 +43,7 @@ body {
 
 :root {
   --h-base-color: rgb(119, 119, 119);
-  --h-nav-list-active: rgb(89, 37, 134);
+  --h-nav-list-active: rgb(254, 1, 92);
   --h-nav-bg: rgb(40, 40, 40);
   --m-header-main: rgb(162, 162, 162);
   --m-tmlist-pg-active: rgb(96, 96, 96);

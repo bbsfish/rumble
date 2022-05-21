@@ -67,7 +67,12 @@ header {
 .h-nav-list-item a:hover {
   color: var(--h-nav-list-active) !important;
   /* transition-delay: 0.3s; */
-  font-size: 1.2em !important;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+.h-nav-list-item a:active {
+  color: var(--h-nav-list-active) !important;
+  /* transition-delay: 0.3s; */
   transition-timing-function: ease-in;
   transition-duration: 0.2s;
 }

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); */
 .m-header{
   background-color: rgb(94, 94, 94);
-  background-image: url("assets/topwallpaper.jpeg");
+  background-image: url("../assets/wallpaper.jpeg");
   background-position: center;
   text-align: center;
   background-size: cover;
@@ -73,7 +73,7 @@ section {
   scrollbar-width: none;       /* Firefox 対応 */
 }
 .img-list::-webkit-scrollbar {  /* Chrome, Safari 対応 */
-  display:none;
+  display: none;
 }
 .img-list:hover {
   -ms-overflow-style: auto;    /* IE, Edge 対応 */
@@ -89,12 +89,15 @@ section {
   text-align: center;
   margin:5px 5px;
 }
-.img-list p{
+.img-list p {
   display: block;
   height: 40px;
   width: 150px;
   padding: 0;
   margin: 0 auto;
+  word-break:break-all;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 .img-list img {
   width: 150px;
