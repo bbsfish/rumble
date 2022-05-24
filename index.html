@@ -6,10 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/com.css" />
   <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script>
+    $('a[href^=#]').click(function() {
+      var speed = 500; // スクロール速度(ミリ秒)
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+    });
+  </script>
   <title>PANMry Works</title>
 </head>
 <body>
@@ -52,6 +61,19 @@
       <h2>INTRODUCE</h2>
       <hr>
       <p class="description" id="desc01">introduce text</p>
+      <script>
+        (function () {
+          let req = new XMLHttpRequest();
+          req.open("GET", "./assets_docs/introduce.txt", true);
+          req.send();
+          req.onreadystatechange = function () {
+              if (req.readyState == 4 && req.status == 200) {
+                const desc01 = document.getElementById("desc01");
+                desc01.innerHTML = req.responseText.replace(/\r?\n/g, '<br>');
+              }
+          }
+        })();
+      </script>
     </section>
     <!-- #highlights -->
     <section class="m-sections" id="highlights">
@@ -88,6 +110,5 @@
 </footer>
   <!-- %#FOOTER_END% -->
   <script src="./js/menu.js"></script>
-  <script src="./js/sync.js" onload="desc01();"></script>
 </body>
 </html>

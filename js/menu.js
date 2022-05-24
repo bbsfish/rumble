@@ -9,6 +9,11 @@ $(document).click(function(event) {
   }
 });
 
+// const barger_btn = document.getElementById("barger-menu-btn");
+// barger_btn.addEventListener('click', function () {
+//   barger_btn.toggleClass("active");
+// }, false);
+
 $("#barger-menu-btn").click(function () {
   // barger-menu-btn onClick
   $(this).toggleClass('active');
@@ -19,15 +24,4 @@ $("#barger-menu-list li a").click(function () {
   // ナビゲーションリンク onClick
   $("#barger-menu-btn").removeClass('active');
   $("#barger-menu-list").removeClass('panelactive');
-});
-
-$(function(){
-  $('a[href^=#]').click(function() {
-  var speed = 500; // スクロール速度(ミリ秒)
-  var href = $(this).attr("href");
-  var target = $(href == "#" || href == "" ? 'html' : href);
-  var position = target.offset().top;
-  $('html').animate({scrollTop:position}, speed, 'swing');
-  return false;
-  });
 });

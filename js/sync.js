@@ -1,17 +1,7 @@
-const file_desc01 = "../assets_docs/introduce.txt";
-const file_gal01 = "../assets_docs/gallery-part.xml";
+const file_desc01 = "./assets_docs/introduce.txt";
+const file_gal01 = "./assets_docs/gallery-part.xml";
 
-function desc01() {
-    let req = new XMLHttpRequest();
-    req.open("GET", file_desc01, true);
-    req.send();
-    req.onreadystatechange = function () {
-        if (req.readyState == 4 && req.status == 200) {
-            const desc01 = document.getElementById("desc01");
-            desc01.innerHTML = req.responseText.replace(/\r?\n/g, '<br>');
-        }
-    }
-}
+
 
 let gal_counter = 1;
 const marker = document.getElementById("readmore_elem");
