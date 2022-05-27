@@ -1,27 +1,35 @@
-$(document).click(function(event) {
-  if(!$(event.target).closest('#barger-menu-list').length && !$(event.target).closest('#barger-menu-btn').length) {
+const bargerBtn = document.getElementById("barger-menu-btn");
+const bargerList = document.getElementById("barger-menu-list");
+
+document.addEventListener('click', (event) => {
+  event.preventDefault();
+  if(!event.target.closest('.barger-menu-list') && !event.target.closest('.barger-menu-btn')) {
     // barger-menu-list, barger-menu-btn外をクリック
-    if($("#barger-menu-btn").hasClass('active')) {
-      // barger-menu-btn = active のとき
-      $("#barger-menu-btn").removeClass('active');
-      $("#barger-menu-list").removeClass('panelactive');
+    if (bargerBtn.className.split(" ").includes("active")) {
+      // barger-menu-btn = activeのとき
+      bargerBtn.classList.remove("active");
+      bargerList.classList.remove("panelactive");
     }
   }
-});
+}, false);
 
-// const barger_btn = document.getElementById("barger-menu-btn");
-// barger_btn.addEventListener('click', function () {
-//   barger_btn.toggleClass("active");
-// }, false);
+// btnクリックでtoggle
+bargerBtn.onclick = () => {
+  // barger-menu-btn クリック
+  bargerBtn.classList.toggle("active");
+  bargerList.classList.toggle("panelactive");
+}
 
-$("#barger-menu-btn").click(function () {
-  // barger-menu-btn onClick
-  $(this).toggleClass('active');
-    $("#barger-menu-list").toggleClass('panelactive');
-});
-
-$("#barger-menu-list li a").click(function () {
-  // ナビゲーションリンク onClick
-  $("#barger-menu-btn").removeClass('active');
-  $("#barger-menu-list").removeClass('panelactive');
-});
+// リンクをクリックしたら閉じる
+const listItems = document.getElementsByClassName("h-nav-list-item");
+for (let i = 0; i < listItems.length; i++) {
+  const element = listItems[i].lastElementChild;
+  element.addEventListener("click", () => {
+    // barger-menu-btn クリック
+    bargerBtn.classList.remove("active");
+    bargerList.classList.remove("panelactive");
+    // 強制遷移
+    let href = element.getAttribute('href');
+    window.location.href = href; 
+  });
+};

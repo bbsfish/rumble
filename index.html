@@ -8,17 +8,7 @@
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script>
-    $('a[href^=#]').click(function() {
-      var speed = 500; // スクロール速度(ミリ秒)
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-    });
-  </script>
+  <link rel="icon" href="favicon.png">
   <title>PANMry Works</title>
 </head>
 <body>
@@ -43,8 +33,8 @@
         <div class="barger-menu-list" id="barger-menu-list"><ul>
           <li class="h-nav-list-item"><a href="#intro" class="h-nav-list-active">intro</a></li>
           <li class="h-nav-list-item"><a href="#highlights">highlights</a></li>
-          <li class="h-nav-list-item"><a href="works.html">works</a></li>
-          <li class="h-nav-list-item"><a href="about.html">about</a></li>
+          <li class="h-nav-list-item"><a href="./works.html">works</a></li>
+          <li class="h-nav-list-item"><a href="./about.html">about</a></li>
         </ul></div>
       </div>
     </div>
@@ -80,8 +70,8 @@
       <h2>HIGHLIGHTS</h2>
       <hr>
       <div class="img-list">
-        <a href="works.html"><img src="./assets/p01.jpeg"><p>作品公開</p><time>2022.05.21</time></a>
-        <a href="index.html"><img src="./assets/panmry-logo.bmp"><p>ホームページ公開</p><time>2022.05.21</time></a>
+        <a href="./works.html"><img src="./assets/p01.jpeg"><p>作品公開</p><time>2022.05.21</time></a>
+        <a href="./index.html"><img src="./lib/logo.bmp"><p>ホームページ公開</p><time>2022.05.21</time></a>
       </div>
     </section>
   </main>
@@ -110,5 +100,26 @@
 </footer>
   <!-- %#FOOTER_END% -->
   <script src="./js/menu.js"></script>
+  <script>
+    const scrllTarget = document.querySelectorAll('a[href^="#"]');
+    scrllTarget.forEach(element => {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        // get value of linked index
+        let href = element.getAttribute('href');
+        let linked_id = document.getElementById(href.replace('#', ''));
+
+        // get target position
+        const rect = linked_id.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const position = rect + offset;
+
+        window.scrollTo({
+          top: position,
+          behavior: 'smooth',
+        });
+      });
+    });
+  </script>
 </body>
 </html>
