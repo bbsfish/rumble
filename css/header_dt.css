@@ -1,0 +1,105 @@
+
+/* header */
+header {
+  width: 100%;
+  text-align: center;
+  color: var(--base-white);
+}
+
+.header-nav {
+  width: 100%;
+  height: 50px;
+  background-color: var(--h-nav-bg);
+  display: flex;
+}
+.header-body {
+  width: 100%;
+}
+
+/* header logo */
+.h-logo {
+  width: 105px;
+  height: 50px;
+}
+
+.h-logo a {
+  font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
+  display: block;
+  width: 105px;
+  height: 50px;
+  color: var(--h-nav-list-active);
+  position: relative;
+}
+
+.h-logo a span:first-child {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-size: 25px;
+}
+.h-logo a span:last-child {
+  position: absolute;
+  left: 29px;
+  top: 24.5px;
+  font-size: 19px;
+}
+
+/* header nav */
+.h-nav-list-center ul {
+  width: 270px;
+  display: flex;
+}
+
+.h-nav-list-item {
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  line-height: 49px;
+  text-transform: uppercase;
+}
+.h-nav-list-item a {
+  display: block;
+  color: var(--base-white);
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+}
+.h-nav-list-item a:hover {
+  color: var(--h-nav-list-active) !important;
+  /* transition-delay: 0.3s; */
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+.h-nav-list-item a:active {
+  color: var(--h-nav-list-active) !important;
+  /* transition-delay: 0.3s; */
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+.h-nav-list-right {
+  width: 90px;
+  height: 50px;
+  margin-left: auto;
+}
+.h-nav-list ul {
+  display: flex;
+}
+
+.h-nav-list ul li { 
+  width: 80px;
+  height: 50px;
+}
+
+.h-nav-list:last-child {
+  margin-left:auto;
+}
+
+.h-nav-list-active {
+  color: var(--h-nav-list-active) !important;
+  font-size: 1.2em !important;
+}
+
+/* header humberger */
+.barger-menu {
+ display: none;
+}
