@@ -1,153 +1,125 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>PANMry Works: Make the world tremendous</title>
-    <meta name="description" content="PANMry Painting, to make the world tremendous." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Codeply">
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/animate.min.css" />
-    <link rel="stylesheet" href="./css/ionicons.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="index.html">
-                    <span class="nav-brand-split nav-brand-top">PANMry</span>
-                    <span class="nav-brand-split nav-brand-bottom">Works</span>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" id="bs-navbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="page-scroll" href="#one">intro</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#two">highlights</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="gallery.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="shop.html">Shop</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="about.html">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header id="first">
-        <div class="header-content">
-            <div class="inner">
-                <h1 class="cursive">Make the world tremendous.</h1>
-                <h4></h4>
-                <hr>
-                <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a>
-            </div>
-        </div>
-        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
-            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-    </header>
-    <section class="bg-dark" id="one">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                    <h2 class="margin-top-0 text-primary">INTRODUCE</h2>
-                    <hr class="primary">
-                    <p class="text-faded">
-                        Introduce text
-                    </p>
-                    <!-- intro の詳細を表示する場合 -->
-                    <!-- <a href="" class="btn btn-default btn-xl page-scroll">Learn More</a> -->
-                </div>
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/com.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
+  <link rel="icon" href="favicon.png">
+  <title>PANMry Works</title>
+</head>
+<body>
+  <!-- header -->
+  <!-- %#HEADER% -->
+  <header>
+    <div class="header-nav">
+      <h1 class="h-logo"><a href="./index.html"><span>PANMry</span><span>Works</span></a></h1>
+      <nav class="h-nav-list h-nav-list-center"><ul>
+        <li class="h-nav-list-item"><a href="index.html#intro" class="h-nav-list-active">intro</a></li>
+        <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
+        <li class="h-nav-list-item"><a href="works.html">works</a></li>
+      </ul></nav>
+      <nav class="h-nav-list h-nav-list-right"><ul>
+        <li class="h-nav-list-item"><a href="about.html">about</a></li>
+      </ul></nav>
+      <!-- barger menu -->
+      <div class="barger-menu">
+        <!-- barger btn -->
+        <label for="barger-menu-list" class="barger-menu-btn" id="barger-menu-btn"><span></span></label>
+        <!-- barger list -->
+        <div class="barger-menu-list" id="barger-menu-list"><ul>
+          <li class="h-nav-list-item"><a href="#intro" class="h-nav-list-active">intro</a></li>
+          <li class="h-nav-list-item"><a href="#highlights">highlights</a></li>
+          <li class="h-nav-list-item"><a href="./works.html">works</a></li>
+          <li class="h-nav-list-item"><a href="./about.html">about</a></li>
+        </ul></div>
+      </div>
+    </div>
+  </header>
+  <!-- %#HEADER_END% -->
+  <!-- main -->
+  <main>
+    <div class="m-header">
+      <h1>Make the world tremendous</h1>
+      <a href="#intro">Get Started</a>
+    </div>
+    <!-- #intro -->
+    <section class="m-sections" id="intro">
+      <h2>INTRODUCE</h2>
+      <hr>
+      <p class="description" id="desc01">introduce text</p>
+      <script>
+        (function () {
+          let req = new XMLHttpRequest();
+          req.open("GET", "./assets_docs/introduce.txt", true);
+          req.send();
+          req.onreadystatechange = function () {
+              if (req.readyState == 4 && req.status == 200) {
+                const desc01 = document.getElementById("desc01");
+                desc01.innerHTML = req.responseText.replace(/\r?\n/g, '<br>');
+              }
+          }
+        })();
+      </script>
     </section>
-    <section id="two">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="margin-top-0 text-primary">HIGHLIGHTS</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container gallery">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="highlights">
-                        <!-- highlights img = 360px x 240px -->
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1FNqZQ3RetNnZCxRAv4jk4hGn1zo-VZSFCA&usqp=CAU" />
-                        <h3>梶原雄太の家<BR>大公開大合掌大射精</h3>
-                        <p class="text-muted">Make new world Project</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="highlights">
-                        <img src="https://blog.esrij.com/arcgisblog/wp-content/uploads/2018/10/1-1.png" />
-                        <h3>カジサック</h3>
-                        
-                        <p class="text-muted">吉本</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="highlights">
-                        <!-- <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i> -->
-                        <img src="https://artna.jp/wp-content/uploads/2019/07/art-of-europe06-680x453.jpg" />
-                        <h3>New releace</h3>
-                        <p class="text-muted">Enjoy his new theme</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- #highlights -->
+    <section class="m-sections" id="highlights">
+      <h2>HIGHLIGHTS</h2>
+      <hr>
+      <div class="img-list">
+        <a href="./works.html"><img src="./assets/p01.jpeg"><p>作品公開</p><time>2022.05.21</time></a>
+        <a href="./index.html"><img src="./lib/logo.bmp"><p>ホームページ公開</p><time>2022.05.21</time></a>
+      </div>
     </section>
-    <footer id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-6 col-sm-4 column">
-                    <h4>Information</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html#developpers">Developers</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-6 col-sm-4 column">
-                    <h4>About</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 column">
-                    <h4>Follow</h4>
-                    <ul class="list-inline">
-                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
-                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
-                      <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <br/>
-            <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Landing Zero by BootstrapZero</a> ©2015 Company</span>
-        </div>
-    </footer>
-    <!--scripts loaded here -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/wow.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+  </main>
+  <!-- footer -->
+  <!-- %#FOOTER% -->
+<footer>
+  <nav class="f-nav-left">
+    <h4>Abstract</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#developpers">Developper</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-left">
+    <h4>Details</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#contactus">Contact Us</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-right">
+    <h4>Follow</h4>
+    <ul class="follow-me">
+      <li><a href="https://twitter.com/PANMry_official" id="twttr"></a></li>
+      <li><a href="https://www.instagram.com/panmry__/" id="insta"></a></li>
+    </ul>
+  </nav>
+</footer>
+  <!-- %#FOOTER_END% -->
+  <script src="./js/menu.js"></script>
+  <script>
+    const scrllTarget = document.querySelectorAll('a[href^="#"]');
+    scrllTarget.forEach(element => {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        // get value of linked index
+        let href = element.getAttribute('href');
+        let linked_id = document.getElementById(href.replace('#', ''));
+
+        // get target position
+        const rect = linked_id.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const position = rect + offset;
+
+        window.scrollTo({
+          top: position,
+          behavior: 'smooth',
+        });
+      });
+    });
+  </script>
+</body>
 </html>

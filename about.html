@@ -1,134 +1,160 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>PANMry Works: Make the world tremendous</title>
-    <meta name="description" content="PANMry Painting, to make the world tremendous." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Codeply">
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/animate.min.css" />
-    <link rel="stylesheet" href="./css/ionicons.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/styleplus.css" />
-    <link rel="stylesheet" href="./css/about-style.css" />
-  </head>
-  <body>
-    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="index.html">
-                    <span class="nav-brand-split nav-brand-top">PANMry</span>
-                    <span class="nav-brand-split nav-brand-bottom">Works</span>
-                </a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/com.css" />
+  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <title>PANMry Works</title>
+</head>
+<body>
+  <!-- header -->
+  <!-- %#HEADER% -->
+  <header>
+    <div class="header-nav">
+      <h1 class="h-logo"><a href="./index.html"><span>PANMry</span><span>Works</span></a></h1>
+      <nav class="h-nav-list h-nav-list-center"><ul>
+        <li class="h-nav-list-item"><a href="index.html#intro" class="h-nav-list-active">intro</a></li>
+        <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
+        <li class="h-nav-list-item"><a href="works.html">works</a></li>
+      </ul></nav>
+      <nav class="h-nav-list h-nav-list-right"><ul>
+        <li class="h-nav-list-item"><a href="about.html">about</a></li>
+      </ul></nav>
+      <!-- barger menu -->
+      <div class="barger-menu">
+        <!-- barger btn -->
+        <label for="barger-menu-list" class="barger-menu-btn" id="barger-menu-btn"><span></span></label>
+        <!-- barger list -->
+        <div class="barger-menu-list" id="barger-menu-list"><ul>
+          <li class="h-nav-list-item"><a href="index.html#intro">intro</a></li>
+          <li class="h-nav-list-item"><a href="index.html#highlights">highlights</a></li>
+          <li class="h-nav-list-item"><a href="works.html">works</a></li>
+          <li class="h-nav-list-item"><a href="about.html" class="h-nav-list-active">about</a></li>
+        </ul></div>
+      </div>
+    </div>
+  </header>
+  <!-- %#HEADER_END% -->
+  <!-- main -->
+  <main>
+    <div class="m-header-hidden"></div>
+    <!-- #intro -->
+    <section class="m-sections">
+      <h2>ABOUT</h2>
+      <hr>
+      <div class="sub-sections">
+        <h3 class="sub-sections-header">Abstract</h3>
+        <hr class="sub-hr">
+        <!-- Developpers -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title" id="developpers"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dd class="bordered">
+            <p>・Person 1</p>
+            <p>・Person 2</p>
+            <p>・Person 3</p>
+            <p>・Person 4</p>
+          </dd>
+        </dl>
+        <!-- Developpers -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dd class="bordered">
+            <p>・Person 1</p>
+            <p>・Person 2</p>
+            <p>・Person 3</p>
+            <p>・Person 4</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="sub-sections">
+        <h3 class="sub-sections-header">Details</h3>
+        <hr class="sub-hr">
+        <!-- Contact Us -->
+        <dl class="toggle_contents">
+          <dt class="toggle_title" id="contactus"><span class="toggle_btn">開く</span>Contact Us</dt>
+          <!-- post form: disabled -->
+          <!-- <dd>
+            <div class="form01 contact_us_form">
+              <form method="post" action="mail.php">
+              <ul class="formTable">
+                <li>
+                  <p class="title"><em>ご用件<span>必須</span></em></p>
+                  <div class="box_det"><select name="ご用件">
+                      <option selected disabled>選択してください</option>
+                      <option value="作品について">作品に関する問い合わせ</option>
+                      <option value="その他">その他の問い合わせ</option>
+                    </select></td>
+                </li>
+                <li>
+                  <p class="title"><em>お名前<span>必須</span></em></p>
+                  <div class="box_det"><input size="20" type="text" class="wide" name="お名前" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>Email (半角)<span>必須</span></em></p>
+                  <div class="box_det"><input size="30" type="text" class="wide" name="Email" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>電話番号 (半角)</em></p>
+                  <div class="box_det"><input size="30" type="text" class="wide" name="Email" /></div>
+                </li>
+                <li>
+                  <p class="title"><em>お問い合わせ内容</em></p>
+                  <div class="box_det"><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></div>
+                </li>
+              </ul>
+              <p class="btn">
+                  <span><input type="submit" value="確認" /></span>
+              </p>
+            </form>
             </div>
-            <div class="navbar-collapse collapse" id="bs-navbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="page-scroll" href="index.html#one">intro</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="index.html#two">highlights</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="gallery.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="shop.html">Shop</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="about.html">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section>
-        <!-- Information -->
-        <div class="container" id="information">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="margin-top-0 text-primary">INFORMATION</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-left about-element" id="developpers">
-                        <h2>Developpers</h2>
-                        <p>Hello everyone</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- About -->
-        <div class="container" id="about">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="margin-top-0 text-primary">ABOUT</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-left about-element" id="contactus">
-                        <h2>Contact Us</h2>
-                        <form class="contactform" method="post">
-                            <li><label>Name</label><input type="text" name="yourname" placeholder="Enter your name*"></li>
-                            <li><label>Mail</label><input type="text" name="yourmailadress" placeholder="Enter your Email adress*"></li>
-                            <li><label>Content</label><textarea name="content"></textarea></li>
-                            <li class="btn"><input type="submit" name="submit" value="Send"></li>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </dd> -->
+          <!-- altitude contact method -->
+          <dd class="bordered">
+            <p>ご意見・お問い合わせは、下記までお願いします。</p>
+            <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;ysk1122.dev@gmail.com</p>
+          </dd>
+        </dl>
+      </div>
     </section>
-    <footer id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-6 col-sm-4 column">
-                    <h4>Information</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html#developpers">Developers</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-6 col-sm-4 column">
-                    <h4>About</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html#contactus">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 column">
-                    <h4>Follow</h4>
-                    <ul class="list-inline">
-                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
-                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
-                      <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <br/>
-            <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Landing Zero by BootstrapZero</a> ©2015 Company</span>
-        </div>
-    </footer>
-    <!--scripts loaded here -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/wow.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+  </main>
+  <!-- footer -->
+  <!-- %#FOOTER% -->
+<footer>
+  <nav class="f-nav-left">
+    <h4>Abstract</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#developpers">Developper</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-left">
+    <h4>Details</h4>
+    <ul class="f-list-unstyled">
+      <li><a rel="nofollow" href="about.html#contactus">Contact Us</a></li>
+    </ul>
+  </nav>
+  <nav class="f-nav-right">
+    <h4>Follow</h4>
+    <ul class="follow-me">
+      <li><a href="https://twitter.com/PANMry_official" id="twttr"></a></li>
+      <li><a href="https://www.instagram.com/panmry__/" id="insta"></a></li>
+    </ul>
+  </nav>
+</footer>
+  <!-- %#FOOTER_END% -->
+  <script src="./js/menu.js"></script>
+  <script>
+    $(function(){
+      $('.toggle_title').click(function(){
+        $(this).toggleClass('selected');
+        $(this).next().slideToggle();
+      });
+    });
+  </script>
+</body>
 </html>
