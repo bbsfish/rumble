@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
   <link rel="icon" href="favicon.png">
   <title>PANMry Works</title>
+  <script src="./js/main.js"></script>
 </head>
 <body>
   <!-- header -->
@@ -51,19 +52,6 @@
       <h2>INTRODUCE</h2>
       <hr>
       <p class="description" id="desc01">introduce text</p>
-      <script>
-        (function () {
-          let req = new XMLHttpRequest();
-          req.open("GET", "./assets_docs/introduce.txt", true);
-          req.send();
-          req.onreadystatechange = function () {
-              if (req.readyState == 4 && req.status == 200) {
-                const desc01 = document.getElementById("desc01");
-                desc01.innerHTML = req.responseText.replace(/\r?\n/g, '<br>');
-              }
-          }
-        })();
-      </script>
     </section>
     <!-- #highlights -->
     <section class="m-sections" id="highlights">
@@ -98,28 +86,7 @@
     </ul>
   </nav>
 </footer>
-  <!-- %#FOOTER_END% -->
-  <script src="./js/menu.js"></script>
-  <script>
-    const scrllTarget = document.querySelectorAll('a[href^="#"]');
-    scrllTarget.forEach(element => {
-      element.addEventListener('click', (e) => {
-        e.preventDefault();
-        // get value of linked index
-        let href = element.getAttribute('href');
-        let linked_id = document.getElementById(href.replace('#', ''));
-
-        // get target position
-        const rect = linked_id.getBoundingClientRect().top;
-        const offset = window.pageYOffset;
-        const position = rect + offset;
-
-        window.scrollTo({
-          top: position,
-          behavior: 'smooth',
-        });
-      });
-    });
-  </script>
+<!-- %#FOOTER_END% -->
+<script src="./js/sync_index.js"></script>
 </body>
 </html>

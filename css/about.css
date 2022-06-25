@@ -38,6 +38,7 @@ section {
 	text-align: center;
   color: var(--base-white);
 }
+
 .toggle_btn {
 	position: absolute;
 	top: 50%;
