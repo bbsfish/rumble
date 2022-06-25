@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/header_mb.css" type="text/css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
   <title>PANMry Works</title>
 </head>
 <body>
@@ -53,7 +54,10 @@
         <hr class="sub-hr">
         <!-- Developpers -->
         <dl class="toggle_contents">
-          <dt class="toggle_title" id="developpers"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>
+            <span class="lang_ja">開発者</span>
+            <span class="lang_en">Developpers</span>
+          </dt>
           <dd class="bordered">
             <p>・Person 1</p>
             <p>・Person 2</p>
@@ -61,9 +65,12 @@
             <p>・Person 4</p>
           </dd>
         </dl>
-        <!-- Developpers -->
+        <!-- History -->
         <dl class="toggle_contents">
-          <dt class="toggle_title"><span class="toggle_btn">開く</span>Developpers</dt>
+          <dt class="toggle_title"><span class="toggle_btn">開く</span>
+            <span class="lang_ja">逸話</span>
+            <span class="lang_en">Anecdote</span>
+          </dt>
           <dd class="bordered">
             <p>・Person 1</p>
             <p>・Person 2</p>
@@ -77,7 +84,10 @@
         <hr class="sub-hr">
         <!-- Contact Us -->
         <dl class="toggle_contents">
-          <dt class="toggle_title" id="contactus"><span class="toggle_btn">開く</span>Contact Us</dt>
+          <dt class="toggle_title" id="contactus"><span class="toggle_btn">開く</span>
+          <span class="lang_ja">お問い合わせ</span>
+          <span class="lang_en">Contact Us</span>
+          </dt>
           <!-- post form: disabled -->
           <!-- <dd>
             <div class="form01 contact_us_form">
@@ -116,7 +126,13 @@
           </dd> -->
           <!-- altitude contact method -->
           <dd class="bordered">
-            <p>ご意見・お問い合わせは、下記までお願いします。</p>
+            <p>
+              <span class="lang_ja">ご意見・お問い合わせは、下記までお願いします。</span>
+              <span class="lang_en">
+                If you have any inquiries, opinions, or requests that you would like to make, 
+                please send an Email to the following address.
+              </span>
+            </p>
             <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;ysk1122.dev@gmail.com</p>
           </dd>
         </dl>
@@ -147,7 +163,6 @@
   </nav>
 </footer>
   <!-- %#FOOTER_END% -->
-  <script src="./js/menu.js"></script>
   <script>
     $(function(){
       $('.toggle_title').click(function(){

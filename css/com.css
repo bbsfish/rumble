@@ -60,6 +60,15 @@ main {
   background-color: var(--m-bgcolor-1);
 }
 
+.invisible {  /* 非表示せってい */
+  display: none;
+}
+
+span {
+  font-size: inherit;
+  color: inherit;
+}
+
 /* footer */
 footer {
   background-color: var(--m-bgcolor-1);
