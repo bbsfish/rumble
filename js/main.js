@@ -3,6 +3,7 @@ window.onload = function () {
     const userlang = navigator.language;
     setUseLang(userlang);
 
+
     // 必要JSファイル読み込み
     const document_head = document.getElementsByTagName("head");
     let new_script = document.createElement("script");
