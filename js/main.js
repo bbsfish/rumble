@@ -1,6 +1,7 @@
 window.onload = function () {
     // 使用言語選択
     const userlang = navigator.language;
+    console.log(userlang);
     setUseLang(userlang);
 
 
@@ -19,7 +20,6 @@ function setUseLang(lang) {
     const en_span = document.getElementsByClassName("lang_en");
     if (ja_span.length == 0) { return; }
     if (ja_span.length == 0) { return; }
-
     switch (lang) {
         case "ja":
             for (let i = 0; i < ja_span.length; i++) {
@@ -27,6 +27,7 @@ function setUseLang(lang) {
                 en_span[i].classList.add("invisible");
             }
             break;
+            
         case "en":
         default:
             for (let i = 0; i < ja_span.length; i++) {

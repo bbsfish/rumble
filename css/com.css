@@ -156,6 +156,7 @@ footer.f-list-unstyled li a{
 }
 .follow-me li a[href*="twitter.com"]::before { content: "\f099"; }
 .follow-me li a[href*="instagram.com"]::before { content: "\f16d"; }
+.follow-me li a[href$="/subscribe"]::before { content: "\f000"; font-family: blogicon; }
 
 /* hr */
 hr {
