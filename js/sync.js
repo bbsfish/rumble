@@ -1,8 +1,6 @@
 const file_desc01 = "./assets_docs/introduce.txt";
 const file_gal01 = "./assets_docs/gallery-part.xml";
 
-
-
 let gal_counter = 1;
 const marker = document.getElementById("readmore_elem");
 

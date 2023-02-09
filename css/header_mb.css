@@ -1,19 +1,25 @@
+:root {
+  /* Barger Menu [bgmn] */
+  --bgc-bgmn: #8d8d8d;
+  --barc-bgmn: #000000;
+}
+
 /* header */
 header {
   width: 100%;
   text-align: center;
-  color: var(--base-white);
+  color: var(--fc-h);
 }
 
 .header-nav {
   width: 100%;
   height: 50px;
-  background-color: var(--h-nav-bg);
+  background-color: var(--bgc-h);
   position: fixed;
 }
 
 .h-nav-list-active {
-  color: var(--h-nav-list-active) !important;
+  color: var(--fc-h-hover) !important;
   font-size: 18px !important;
 }
 
@@ -25,7 +31,7 @@ header {
 .h-logo {
   width: 100vw;
   height: 50px;
-  background-color: var(--h-nav-bg);
+  background-color: var(--bgc-h);
   position: absolute;
   z-index: 5000;
 }
@@ -35,7 +41,7 @@ header {
   display: block;
   width: 105px;
   height: 50px;
-  color: var(--h-nav-list-active);
+  color: var(--fc-h);
   position: relative;
 }
 
@@ -66,8 +72,8 @@ header {
   position: absolute;
   z-index: 1000;
   top: -250px;
-  border-top: 1px solid var(--base-white);
-  background-color: var(--h-nav-bg);
+  border-top: 1px solid var(--barc-bgmn);
+  background-color: var(--bgc-bgmn);
   width: 100%;
   transition: all 0.6s;
 }
@@ -99,7 +105,7 @@ header {
   width: 40px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0,.2);
+  background-color: var(--bgc-bgmn);
 }
 #barger-menu-btn span,
 #barger-menu-btn span:before,
@@ -110,7 +116,7 @@ header {
   height: 4px;
   width: 25px;
   border-radius: 3px;
-  background-color: var(--base-white);
+  background-color: var(--barc-bgmn);
   position: absolute;
 }
 #barger-menu-btn span:before {

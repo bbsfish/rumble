@@ -12,13 +12,13 @@
 
 li {
   text-decoration: none;
-  list-style-type:none;
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
   list-style-type:none;
-  color: white;
+  color: var(--fc);
 }
 
 button{
@@ -42,13 +42,25 @@ body {
 }
 
 :root {
-  --h-base-color: rgb(119, 119, 119);
-  --h-nav-list-active: rgb(254, 1, 92);
-  --h-nav-bg: rgb(40, 40, 40);
-  --m-header-main: rgb(162, 162, 162);
-  --m-tmlist-pg-active: rgb(96, 96, 96);
-  --m-bgcolor-1: #222;
-  --base-white: aliceblue;
+  /*
+    --type-place-supplement
+    <type>
+      fc=font color
+      bgc=background color
+  */
+  --fc: #000000;
+  --fc-h: #000000;
+  --fc-h-hover: #ff0038;
+  --bgc-h: #8d8d8d;
+  --h-base-color: #ff0038;
+  --h-nav-list-active: #ff0038;
+  --h-nav-bg: #8d8d8d;
+  --m-header-main: rgb(0, 0, 0);
+  --m-tmlist-pg-active: #8d8d8d;
+  --m-bgcolor-1: #8d8d8d;
+  --base-white: #8d8d8d;
+
+  --logo: #ff0038;
 }
 
 img {
@@ -76,6 +88,8 @@ footer {
   height: 110px;
   position: relative;
 }
+
+
 @media(max-width: 768px) {
   footer{
     height: 150px;
@@ -96,6 +110,8 @@ footer {
     float: right;
   }
 }
+
+
 footer nav {
   display: block;
   float: left;
@@ -103,6 +119,8 @@ footer nav {
   min-width: 150px;
   padding: 5px 10px;
 }
+
+
 footer nav:last-child {
   display: block;
   width: 20vw;
@@ -111,6 +129,8 @@ footer nav:last-child {
   position: absolute;
   right: 20px;
 }
+
+
 footer h4 {
   border-bottom: var(--base-white) solid 1px;
   font-size: 20px;
@@ -118,6 +138,8 @@ footer h4 {
   margin-bottom: 10px;
   width: 100%;
 }
+
+
 footer.f-list-unstyled li a{
   font-size: 15px;
   color: var(--base-white);
@@ -162,8 +184,8 @@ footer.f-list-unstyled li a{
 hr {
   border: 0;
   height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--h-base-color);
+  border-bottom: 1px solid var(--h-base-color);
   max-width: 120px;
   margin: auto;
   margin-bottom: 20px;
@@ -172,8 +194,8 @@ hr {
 .sub-hr {
   border: 0;
   height: 0;
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  border-top: 1px dashed var(--h-base-color);
+  border-bottom: 1px dashed var(--h-base-color);
   max-width: 100px;
   margin: auto;
   margin-bottom: 20px;
