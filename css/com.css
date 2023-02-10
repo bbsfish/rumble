@@ -47,18 +47,21 @@ body {
     <type>
       fc=font color
       bgc=background color
+      ac=accent color
   */
   --fc: #000000;
   --fc-h: #000000;
   --fc-h-hover: #ff0038;
-  --bgc-h: #8d8d8d;
+  --bgc: #eeeeee;
+  --bgc-h: #eeeeee;
+  --ac: #ff0038;
   --h-base-color: #ff0038;
   --h-nav-list-active: #ff0038;
-  --h-nav-bg: #8d8d8d;
+  --h-nav-bg: #eeeeee;
   --m-header-main: rgb(0, 0, 0);
-  --m-tmlist-pg-active: #8d8d8d;
-  --m-bgcolor-1: #8d8d8d;
-  --base-white: #8d8d8d;
+  --m-tmlist-pg-active: #eeeeee;
+  --m-bgcolor-1: #eeeeee;
+  --base-white: #eeeeee;
 
   --logo: #ff0038;
 }
@@ -178,6 +181,7 @@ footer.f-list-unstyled li a{
 }
 .follow-me li a[href*="twitter.com"]::before { content: "\f099"; }
 .follow-me li a[href*="instagram.com"]::before { content: "\f16d"; }
+.follow-me li a[href*="youtube.com"]::before { content: "\f16a"; }
 .follow-me li a[href$="/subscribe"]::before { content: "\f000"; font-family: blogicon; }
 
 /* hr */

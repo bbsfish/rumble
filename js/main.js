@@ -3,12 +3,6 @@
     const userlang = navigator.language;
     console.log(userlang);
     setUseLang(userlang);
-
-    // 必要JSファイル読み込み
-    // const document_head = document.getElementsByTagName("head");
-    // let new_script = document.createElement("script");
-    //     new_script.src = "./js/menu.js";
-    // document_head[0].appendChild(new_script);
 }
 
 // 言語設定
@@ -35,71 +29,68 @@ function setUseLang(lang) {
     }
 }
 
+// Element
+const bgmenuBtn = document.getElementById("barger-menu-btn");
+const bgmenuList = document.getElementById("barger-menu-list");
+const bgmenuListItems = document.getElementsByClassName("h-nav-list-item");
 
-
-// スムーズ スクロール
-{
-    const scrllTarget = document.querySelectorAll('a[href*="#"]');
-    scrllTarget.forEach(element => {
-        console.log(element.innerHTML);
-    });
-    scrllTarget.forEach(element => {
-        element.addEventListener('click', (e) => {
-            e.preventDefault();
-            // get value of linked index
-            let href = element.getAttribute('href');
-            let linked_id = document.getElementById(href.replace('#', ''));
-
-            // get target position
-            const rect = linked_id.getBoundingClientRect().top;
-            const offset = window.pageYOffset;
-            const position = rect + offset;
-            window.scrollTo({
-                top: position,
-                behavior: 'smooth',
-            });
-        });
-    });
-}
-
-// メニュー
-const bargerBtn = document.getElementById("barger-menu-btn");
-const bargerList = document.getElementById("barger-menu-list");
-
-{
-    document.addEventListener('click', (event) => {
-        event.preventDefault();
-        if(!event.target.closest('.barger-menu-list') && !event.target.closest('.barger-menu-btn')) {
-            // barger-menu-list, barger-menu-btn外をクリック
-            if (bargerBtn.className.split(" ").includes("active")) {
-            // barger-menu-btn = activeのとき
-            bargerBtn.classList.remove("active");
-            bargerList.classList.remove("panelactive");
+// Click Event
+document.addEventListener('click', (event) => {
+    event.preventDefault();
+    const tg = event.target;
+    if (tg.closest('.barger-menu-btn')) {
+        // btnクリックでメニュー展開
+        bgmenuBtn.classList.toggle("active");
+        bgmenuList.classList.toggle("panelactive");
+    } else if(!tg.closest('.barger-menu-list') && !tg.closest('.barger-menu-btn')) {
+        // barger-menu-list, barger-menu-btn外をクリック
+        if (bgmenuBtn.className.split(" ").includes("active")) {
+            // バーガーメニューが展開されているとき格納
+            bgmenuBtn.classList.remove("active");
+            bgmenuList.classList.remove("panelactive");
+        } else if (tg.closest('a')) {
+            // クリック対象が,その他のaタグの時
+            let href = tg.closest('a').getAttribute("href");
+            console.log(href);
+            if (href.match(/^#./)) {
+                // ページ内リンクの時
+                // スムーズ スクロール
+                let linked_id = document.getElementById(href.replace('#', ''));
+                const rect = linked_id.getBoundingClientRect().top;
+                const offset = window.pageYOffset;
+                const position = rect + offset;
+                window.scrollTo({
+                    top: position,
+                    behavior: 'smooth'
+                });
+            } else {
+                // 外部リンクの時
+                window.location.href = tg.closest('a').getAttribute("href");
             }
-        } else {
-            console.log(event);
-            // window.location.href = event.target;
         }
-    }, false);
-
-    // btnクリックでtoggle
-    bargerBtn.onclick = () => {
-    // barger-menu-btn クリック
-    bargerBtn.classList.toggle("active");
-    bargerList.classList.toggle("panelactive");
     }
+}, false);
 
-    // リンクをクリックしたら閉じる
-    const listItems = document.getElementsByClassName("h-nav-list-item");
-    for (let i = 0; i < listItems.length; i++) {
-    const element = listItems[i].lastElementChild;
+for (let i = 0; i < bgmenuListItems.length; i++) {
+    const element = bgmenuListItems[i].lastElementChild;
     element.addEventListener("click", () => {
-        // barger-menu-btn クリック
-        bargerBtn.classList.remove("active");
-        bargerList.classList.remove("panelactive");
-        // 強制遷移
-        let href = element.getAttribute('href');
-        window.location.href = href; 
+        // メニューバーのリンククリックでメニュー格納 & 遷移
+        bgmenuBtn.classList.remove("active");
+        bgmenuList.classList.remove("panelactive");
+        window.location.href = element.getAttribute('href');
     });
-    };
 }
+
+// セキュリティ
+const imgtags = document.getElementsByTagName("img");
+console.log(imgtags);
+for (let imgtag of imgtags) {
+    imgtag.oncontextmenu = function(){ return false; }
+    // imgtags[i].oncontextmenu = function(){ return false; }
+    // imgtags[i].onselectstart = function(){ return false; };
+    // imgtags[i].onmousedown = function(){ return false; };
+}
+// document.body.oncontextmenu = function(){ return false; }
+// document.body.onselectstart = function(){ return false; };
+// document.body.onmousedown = function(){ return false; };
+document.getElementsByTagName("img").oncontextmenu = function(){ return false; }

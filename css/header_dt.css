@@ -24,24 +24,17 @@ header {
 
 .h-logo a {
   font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
-  display: block;
+  display: flex;
   width: 105px;
   height: 50px;
   color: var(--logo);
-  position: relative;
+  align-items: center;
 }
 
-.h-logo a span:first-child {
-  position: absolute;
-  left: 7px;
-  top: 7px;
+.h-logo a span {
+  display: block;
+  padding: 0 5px;
   font-size: 25px;
-}
-.h-logo a span:last-child {
-  position: absolute;
-  left: 29px;
-  top: 24.5px;
-  font-size: 19px;
 }
 
 /* header nav */

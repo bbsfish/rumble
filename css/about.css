@@ -1,5 +1,26 @@
 :root {
-  --sub-bg-color: rgba(135, 135, 135, 0.196);
+  /*
+    --docId-type-place-supplement
+    <docId> a
+    <Type>
+      hrc=hr color
+  */
+  --a-brdrc: var(--ac);
+  --a-hrc: var(--ac);
+  --a-bgc: var(--bgc);
+  --a-bgc-ctt: rgb(148, 148, 148);
+  --a-fc: var(--fc);
+  --a-fc-h2: var(--ac);
+  --a-fc-h3: var(--ac);
+  --a-fc-toggle: var(--fc);
+
+  /* forms */
+  --f-bgc: rgb(148, 148, 148);
+  --f-title: var(--fc);
+  --f-bgc-title: rgb(126, 126, 126);
+  --f-bgc-required: var(--ac);
+  --f-fc-required: rgb(202, 202, 202);
+  --f-parts1-bgc: rgb(202, 202, 202);
 }
 /* section */
 section {
@@ -11,7 +32,7 @@ section {
   text-align: center;
   font-size: 30px;
   padding: 15px 0px;
-  color: var(--h-nav-list-active);
+  color: var(--a-fc-h2);
 }
 
 .sub-sections h3 {
@@ -19,7 +40,7 @@ section {
   text-align: center;
   font-size: 25px;
   padding-bottom: 4px;
-  color: var(--h-nav-list-active);
+  color: var(--a-fc-h3);
 }
 
 .toggle_contents {
@@ -36,7 +57,7 @@ section {
 	cursor: pointer;
 	font-size: 19px;
 	text-align: center;
-  color: var(--base-white);
+  color: var(--a-fc-toggle);
 }
 
 .toggle_btn {
@@ -55,7 +76,7 @@ section {
 .toggle_btn:before, .toggle_btn:after {
 	display: block;
 	content: '';
-	background-color: rgb(202, 202, 202);
+	/* background-color: rgb(202, 202, 202); */
 	position: absolute;
 	width: 10px;
 	height: 2px;
@@ -80,12 +101,12 @@ section {
 }
 
 .toggle_contents p {
-  color: var(--base-white);
+  color: var(--a-fc);
   font-size: 1.2em;
 }
 
 .bordered {
-  border: 1px solid var(--h-nav-list-active);
+  border: 1px solid var(--a-brdrc);
   border-radius: 5px;
   padding: 15px;
 }
@@ -107,7 +128,7 @@ em{
 }
 .form01 form ul {
   width: 100%;
-  background: var(--sub-bg-color);
+  background: var(--f-bgc);
 }
 .form01 form ul li {
   position: relative;
@@ -139,7 +160,7 @@ em{
   font-weight: normal;
   padding: 1em;
   position: relative;
-  color: var(--base-white);
+  color: var(--f-title);
 }
 @media only screen and (min-width: 769px) {
   .form01 form ul li .title {
@@ -168,9 +189,9 @@ em{
     text-align: center;
     width: 100%;
     display: block;
-    padding: .8em .2em;
-    color: rgb(202, 202, 202);
-    background: rgba(135, 135, 135, 0.196);
+    padding: .8em .05em;
+    color: var(--f-title);
+    background: var(--f-bgc-title);
   }
 }
 .form01 form ul li .title em {
@@ -179,9 +200,9 @@ em{
   font-size: 0.8em;
 }
 .form01 form ul li .title span {
-  background: #cd6f55;
+  background: var(--f-bgc-required);
   padding: 0 .3em;
-  color: rgb(202, 202, 202);
+  color: var(--f-fc-required);
   margin-left: .5em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -214,7 +235,7 @@ em{
   border: none;
   outline: none;
   background: transparent;
-  background: rgb(202, 202, 202);
+  background: var(--f-parts1-bgc);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -228,7 +249,7 @@ em{
 }
 .btn input {
   display: inline-block;
-  background: rgb(202, 202, 202);
+  background: var(--f-parts1-bgc);
   padding: .5em 4em;
   color: #000;
   text-decoration: none;
