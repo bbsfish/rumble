@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<datas>
+
+<data><file>goods_001.jpg</file><name>GOODS NAME 001</name><desc>SAMPLE DESC 001</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_002.jpg</file><name>GOODS NAME 002</name><desc>SAMPLE DESC 002</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_003.jpg</file><name>GOODS NAME 003</name><desc>SAMPLE DESC 003</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_004.jpg</file><name>GOODS NAME 004</name><desc>SAMPLE DESC 004</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_005.jpg</file><name>GOODS NAME 005</name><desc>SAMPLE DESC 005</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_006.jpg</file><name>GOODS NAME 006</name><desc>SAMPLE DESC 006</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_007.jpg</file><name>GOODS NAME 007</name><desc>SAMPLE DESC 007</desc><price>1000</price><stock>10<stock><sold>15<sold></data>
+<data><file>goods_008.jpg</file><name>GOODS NAME 008</name><desc>SAMPLE DESC 008</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_009.jpg</file><name>GOODS NAME 009</name><desc>SAMPLE DESC 009</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_010.jpg</file><name>GOODS NAME 010</name><desc>SAMPLE DESC 010</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_011.jpg</file><name>GOODS NAME 011</name><desc>SAMPLE DESC 011</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_012.jpg</file><name>GOODS NAME 012</name><desc>SAMPLE DESC 012</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_013.jpg</file><name>GOODS NAME 013</name><desc>SAMPLE DESC 013</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_014.jpg</file><name>GOODS NAME 014</name><desc>SAMPLE DESC 014</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_015.jpg</file><name>GOODS NAME 015</name><desc>SAMPLE DESC 015</desc><price>1000</price><stock>10<stock><sold>8<sold></data>
+<data><file>goods_016.jpg</file><name>GOODS NAME 016</name><desc>SAMPLE DESC 016</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_017.jpg</file><name>GOODS NAME 017</name><desc>SAMPLE DESC 017</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_018.jpg</file><name>GOODS NAME 018</name><desc>SAMPLE DESC 018</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_019.jpg</file><name>GOODS NAME 019</name><desc>SAMPLE DESC 019</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_020.jpg</file><name>GOODS NAME 020</name><desc>SAMPLE DESC 020</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_021.jpg</file><name>GOODS NAME 021</name><desc>SAMPLE DESC 021</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_022.jpg</file><name>GOODS NAME 022</name><desc>SAMPLE DESC 022</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_023.jpg</file><name>GOODS NAME 023</name><desc>SAMPLE DESC 023</desc><price>1000</price><stock>10<stock><sold>3<sold></data>
+<data><file>goods_024.jpg</file><name>GOODS NAME 024</name><desc>SAMPLE DESC 024</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_025.jpg</file><name>GOODS NAME 025</name><desc>SAMPLE DESC 025</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_026.jpg</file><name>GOODS NAME 026</name><desc>SAMPLE DESC 026</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_027.jpg</file><name>GOODS NAME 027</name><desc>SAMPLE DESC 027</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_028.jpg</file><name>GOODS NAME 028</name><desc>SAMPLE DESC 028</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_029.jpg</file><name>GOODS NAME 029</name><desc>SAMPLE DESC 029</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_030.jpg</file><name>GOODS NAME 030</name><desc>SAMPLE DESC 030</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_031.jpg</file><name>GOODS NAME 031</name><desc>SAMPLE DESC 031</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_032.jpg</file><name>GOODS NAME 032</name><desc>SAMPLE DESC 032</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_033.jpg</file><name>GOODS NAME 033</name><desc>SAMPLE DESC 033</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_034.jpg</file><name>GOODS NAME 034</name><desc>SAMPLE DESC 034</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_035.jpg</file><name>GOODS NAME 035</name><desc>SAMPLE DESC 035</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+<data><file>goods_036.jpg</file><name>GOODS NAME 036</name><desc>SAMPLE DESC 036</desc><price>1000</price><stock>10<stock><sold>1<sold></data>
+
+</datas>

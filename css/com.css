@@ -35,6 +35,7 @@ button{
 body {
   width: 100%;
   font-family: 'Ubuntu Condensed', sans-serif, cursive;
+  background-color: var(--bgc);
 }
 
 .wrap {
@@ -71,8 +72,8 @@ img {
 }
 
 main {
-  min-height: 90vh;
-  background-color: var(--m-bgcolor-1);
+  min-height: 80vw;
+  background-color: var(--bgc);
 }
 
 .invisible {  /* 非表示せってい */
@@ -86,11 +87,17 @@ span {
 
 /* footer */
 footer {
-  background-color: var(--m-bgcolor-1);
+  background-color: var(--bgc);
   width: 100%;
+  max-width: 80vw;
   height: 110px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid var(--ac);
+  padding-top: 10px;
 }
+
 
 
 @media(max-width: 768px) {
@@ -118,8 +125,8 @@ footer {
 footer nav {
   display: block;
   float: left;
-  width: 20vw;
-  min-width: 150px;
+  width: 7vw;
+  min-width: 80px;
   padding: 5px 10px;
 }
 
