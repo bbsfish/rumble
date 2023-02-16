@@ -1,3 +1,6 @@
+// 共有定数
+const SRVURL = "http://sharkbrown.html.xdomain.jp";
+
 {
     // 使用言語選択
     const userlang = navigator.language;
@@ -83,7 +86,6 @@ for (let i = 0; i < bgmenuListItems.length; i++) {
 
 // セキュリティ
 const imgtags = document.getElementsByTagName("img");
-console.log(imgtags);
 for (let imgtag of imgtags) {
     imgtag.oncontextmenu = function(){ return false; }
     // imgtags[i].oncontextmenu = function(){ return false; }

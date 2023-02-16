@@ -211,3 +211,38 @@ hr {
   margin: auto;
   margin-bottom: 20px;
 }
+
+/* 共通スタイル */
+
+/* Watch More */
+.more_btn {
+  width: 150px;
+  height: 30px;
+  font-size: 1.0em;
+  color: var(--w-brdrc-ctt);
+  /* background-color: red; */
+  text-align: center;
+  margin-left: calc((100% - 150px) / 2);
+  border: 1px solid;
+}
+
+/* 並び順番号（ランキングなど） */
+.order_panel {
+  position: relative;
+}
+.order_n {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0; 
+  font-size: 125%;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  text-decoration: underline;
+}
+.lank1 { background-color: rgb(226, 214, 43); }
+.lank2 { background-color: rgb(129, 129, 129); }
+.lank3 { background-color: rgb(226, 141, 43); }
+.lankN { background-color: rgb(255, 255, 255); }

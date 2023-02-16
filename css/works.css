@@ -16,6 +16,7 @@
 /* section */
 section {
   background-color: var(--w-bgc);
+  margin-bottom: 15px;
 }
 
 .m-sections h2 {
@@ -72,7 +73,7 @@ section {
     height: 100%;
     width: auto !important;
     max-width: calc(100vw - 40px);
-    max-height: 250px;
+    max-height: 260px;
   }
   .img-gallery a {
     display: block;
@@ -133,13 +134,9 @@ section {
   }
 }
 
-.more_btn {
-  width: 150px;
-  height: 30px;
-  font-size: 1.0em;
-  color: var(--w-brdrc-ctt);
-  /* background-color: red; */
-  text-align: center;
-  margin-left: calc((100% - 150px) / 2);
-  border: 1px solid;
+/* span */
+#div_goods_list * span {
+  display: block;
 }
+.price::before { content: "\0a5"; margin-right: 5px; }
+.price::after { content: "-"; margin-left: 5px; }

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); */
 .m-header{
   background-color: rgb(94, 94, 94);
-  background-image: url("../assets/wallpaper.jpeg");
+  background-image: url("../lib/topwp.jpeg");
   background-position: center;
   text-align: center;
   background-size: cover;
@@ -43,6 +43,7 @@
 /* section */
 section {
   background-color: var(--m-bgcolor-1);
+  margin-bottom: 15px;
 }
 
 .m-sections h2 {
@@ -63,7 +64,7 @@ section {
 /* highlights img-list */
 .img-list {
   display: inline-block;
-  height: 320px;
+  height: 250px;
   width: 100%;
   white-space: nowrap;
   overflow: scroll;
@@ -84,8 +85,8 @@ section {
 }
 .img-list a{
   display: inline-block;
-  height: 280px;
-  width: 160px;
+  height: 210px;
+  width: 150px;
   text-align: center;
   margin:5px 5px;
 }
@@ -101,6 +102,9 @@ section {
 }
 .img-list img {
   width: 150px;
-  height: 190px;
+  height: 150px;
   margin: 0 auto;
 }
+
+.price::before { content: "\0a5"; margin-right: 5px; }
+.price::after { content: "-"; margin-left: 5px; }

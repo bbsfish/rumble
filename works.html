@@ -11,6 +11,74 @@
   <link rel="stylesheet" href="./css/header_dt.css" type="text/css" media="screen and (min-width: 769px)">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <title>Rumble Official > Works</title>
+  <script>
+    const offset = 6;
+    window.addEventListener("load", ()=>{
+      fetch(SRVURL+"/lib/goods.json")
+        .then( response => response.json())
+        .then( data => {
+        // New Arrivals
+          {
+            const div = document.getElementById("div_goods_list");
+            for (let i = data.length-1; i >= data.length - offset; i--) {
+              let li = document.createElement("li");
+              li.href = "./works.html";
+              li.innerHTML = `<li><a><img src="./goods/${data[i].file}"></a>
+                <p>
+                  <span class="desc">${data[i].desc}</span>
+                  <span class="price">${data[i].price.toLocaleString()}</span>
+                </p>`;
+              div.appendChild(li);
+            }
+          }
+        });
+      sessionStorage.setItem("v", 1);
+    });
+    function load_more() {
+      let v = Number(sessionStorage.getItem("v"));
+      fetch(SRVURL+"/lib/goods.json")
+        .then( response => response.json())
+        .then( data => {
+        // New Arrivals
+          {
+            const div = document.getElementById("div_goods_list");
+            // let b = Math.ceil(data.length / offset);
+            let s = data.length - 1 - (offset * v);
+            
+            for (let i = s; i > s - offset; i--) {
+              let li = document.createElement("li");
+              li.href = "./works.html";
+              li.innerHTML = `<li><a><img src="./goods/${data[i].file}"></a>
+                <p>
+                  <span class="desc">${data[i].desc}</span>
+                  <span class="price">${data[i].price.toLocaleString()}</span>
+                </p>`;
+              div.appendChild(li);
+            }
+            // console.log(
+            //   data.length,
+            //   Math.ceil(data.length / offset),
+            //   data.length%offset
+            // );
+            if (v+1==Math.ceil(data.length / offset)&&data.length%offset==1) {
+              let li = document.createElement("li");
+              li.href = "./works.html";
+              li.innerHTML = `<li><a></a>
+                <p>
+                  <span class="desc">Don't miss it.</span>
+                  <span class="price">0</span>
+                </p>`;
+              div.appendChild(li);
+            }
+            if (v+1==Math.ceil(data.length / offset)) {
+              const e = document.getElementById("readmore_elem");
+              e.style.display = "none";
+            }
+          }
+        });
+      sessionStorage.setItem("v", v+1);
+    }
+  </script>
 </head>
 
 <body>
@@ -55,12 +123,11 @@
     <section class="m-sections">
       <h2>WORKS</h2>
       <hr>
-      <div class="img-gallery" id="gal">
+      <div class="img-gallery" id="div_goods_list">
         <script>
-
         </script>
       </div>
-      <button type="button" id="readmore_elem" class="more_btn">Watch more</button>
+      <button type="button" id="readmore_elem" class="more_btn" onclick="load_more()">Watch more</button>
     </section>
   </main>
   <!-- footer -->
@@ -89,6 +156,5 @@
 </footer>
   <!-- %#FOOTER_END% -->
   <script src="./js/main.js"></script>
-  <script src="./js/sync.js" onload="gal();"></script>
 </body>
 </html>

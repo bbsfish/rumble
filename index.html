@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="icon" href="favicon.png">
   <title>Rumble Official</title>
+  <script>
+    window.addEventListener("load", ()=>{
+      fetch(SRVURL+"/lib/goods.json")
+        .then( response => response.json())
+        .then( data => {
+        // New Arrivals
+          {
+            const div = document.getElementById("div_newarrival_img");
+            for (let i = data.length-1; i >= data.length - 4; i--) {
+              let a = document.createElement("a");
+              a.href = "./works.html";
+              a.innerHTML = `<img src="./goods/${data[i].file}"><p><span class="lang_ja">${data[i].desc}</span><span class="lang_en"></span></p><span class="price">${data[i].price.toLocaleString()}</span>`;
+              div.appendChild(a);
+            }
+          }
+
+        // Lanking
+          {
+            let lanking = data;
+            lanking.sort( (a,b) => {
+              return a.sold - b.sold
+            });
+            const div = document.getElementById("div_lanking_img");
+            let lankN = 1;
+            for (let i = lanking.length-1; i >= lanking.length - 4; i--) {
+              let a = document.createElement("a");
+              a.href = "./works.html";
+              a.className = "order_panel";
+              let span_class = (lankN<=3) ? "lank"+lankN : "lankN";
+              a.innerHTML = `<img src="./goods/${lanking[i].file}"><span class="order_n ${span_class}">${lankN}</span><p><span class="lang_ja">${lanking[i].desc}</span><span class="lang_en"></span></p><span class="price">${lanking[i].price.toLocaleString()}</span>`;
+              div.appendChild(a);
+              lankN++;
+            }
+          }
+        });
+    });
+  </script>
 </head>
 <body>
   <!-- header -->
@@ -57,34 +94,26 @@
     <section class="m-sections" id="highlights">
       <h2>NEW ARRIVALS</h2>
       <hr>
-      <div class="img-list">
-        <a href="./works.html"><img src="./assets/p01.jpeg">
-        <p>
-          <span class="lang_ja">作品公開</span>
-          <span class="lang_en">Unveil works</span>
-        </p><time>2022.05.21</time></a>
-        <a href="./works.html"><img src="./lib/logo.bmp">
-          <p>
-            <span class="lang_ja">ホームページ公開</span>
-            <span class="lang_en">Release HP</span>
-          </p><time>2022.05.21</time></a>
+      <div class="img-list" id="div_newarrival_img">
+      <!-- <a href="./works.html">
+        <img src="./goods/goods_001.jpg">
+        <p><span class="lang_ja">作品公開</span><span class="lang_en">Unveil works</span></p>
+        <time>2022.05.21</time>
+      </a> -->
       </div>
+      <button type="button" id="readmore_elem" class="more_btn" onclick="location.href='./works.html?s=nwarvls'">Watch more</button>
     </section>
     <section class="m-sections" id="highlights">
       <h2>LANKING</h2>
       <hr>
-      <div class="img-list">
-        <a href="./works.html"><img src="./assets/p01.jpeg">
-        <p>
-          <span class="lang_ja">作品公開</span>
-          <span class="lang_en">Unveil works</span>
-        </p><time>2022.05.21</time></a>
-        <a href="./works.html"><img src="./lib/logo.bmp">
-          <p>
-            <span class="lang_ja">ホームページ公開</span>
-            <span class="lang_en">Release HP</span>
-          </p><time>2022.05.21</time></a>
+      <div class="img-list" id="div_lanking_img">
+      <!-- <a href="./works.html">
+        <img src="./goods/goods_001.jpg">
+        <p><span class="lang_ja">作品公開</span><span class="lang_en">Unveil works</span></p>
+        <time>2022.05.21</time>
+      </a> -->
       </div>
+      <button type="button" id="readmore_elem" class="more_btn" onclick="location.href='./works.html?s=lanking'">Watch more</button>
     </section>
   </main>
   <!-- footer -->
@@ -115,5 +144,6 @@
 </footer>
 <!-- %#FOOTER_END% -->
 <script src="./js/main.js"></script>
+<script src="./lib/load.js"></script>
 </body>
 </html>
