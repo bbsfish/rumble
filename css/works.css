@@ -10,6 +10,8 @@
   --w-bgc-ctt: rgb(148, 148, 148);
   --w-fc: var(--fc);
   --w-fc-h2: var(--ac);
+  --w-fc-buybtn: #eeeeee;
+  --w-bgc-buybtn: var(--ac);
 }
 
 
@@ -75,7 +77,7 @@ section {
     max-width: calc(100vw - 40px);
     max-height: 260px;
   }
-  .img-gallery a {
+  .goods_link {
     display: block;
     height: 260px;
     text-align: center;
@@ -115,7 +117,7 @@ section {
     width: auto !important;
     max-width: 350px !important;
   }
-  .img-gallery a {
+  .goods_link {
     display: block;
     height: 300px;
     width: 500px;
@@ -138,5 +140,25 @@ section {
 #div_goods_list * span {
   display: block;
 }
+#div_goods_list li {
+  position: relative;
+}
+
 .price::before { content: "\0a5"; margin-right: 5px; }
 .price::after { content: "-"; margin-left: 5px; }
+
+.buy {
+  border: 0px;
+  border-radius: 5px;
+  background-color: var(--w-bgc-buybtn);
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  line-height: 30px;
+  color: var(--w-fc-buybtn);
+}
+

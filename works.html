@@ -19,20 +19,17 @@
         .then( data => {
         // New Arrivals
           {
-            const div = document.getElementById("div_goods_list");
+            const sortby = getprm("s");
+            if (sortby=="lanking") { data.sort(function(f, s){ return f.sold - s.sold; }); }
+            let lankN = 0;
             for (let i = data.length-1; i >= data.length - offset; i--) {
-              let li = document.createElement("li");
-              li.href = "./works.html";
-              li.innerHTML = `<li><a><img src="./goods/${data[i].file}"></a>
-                <p>
-                  <span class="desc">${data[i].desc}</span>
-                  <span class="price">${data[i].price.toLocaleString()}</span>
-                </p>`;
-              div.appendChild(li);
+              if (sortby=="lanking") { lankN++; }
+              append_goods_html(data[i].file, data[i].desc, data[i].price.toLocaleString(), data[i].orderform, lankN);
             }
+            sessionStorage.setItem("ln", lankN); // lank number 標示中のランキング順位を保管
           }
         });
-      sessionStorage.setItem("v", 1);
+      sessionStorage.setItem("v", 1); // 標示中商品のブロックナンバー (data.length / offset)*vが標示中の商品個数
     });
     function load_more() {
       let v = Number(sessionStorage.getItem("v"));
@@ -41,34 +38,23 @@
         .then( data => {
         // New Arrivals
           {
+            const sortby = getprm("s");
             const div = document.getElementById("div_goods_list");
             // let b = Math.ceil(data.length / offset);
             let s = data.length - 1 - (offset * v);
-            
+            let lankN = Number(sessionStorage.getItem("ln"));
             for (let i = s; i > s - offset; i--) {
-              let li = document.createElement("li");
-              li.href = "./works.html";
-              li.innerHTML = `<li><a><img src="./goods/${data[i].file}"></a>
-                <p>
-                  <span class="desc">${data[i].desc}</span>
-                  <span class="price">${data[i].price.toLocaleString()}</span>
-                </p>`;
-              div.appendChild(li);
+              if (sortby=="lanking") { lankN++; }
+              append_goods_html(data[i].file, data[i].desc, data[i].price.toLocaleString(), data[i].orderform, lankN);
             }
+            sessionStorage.setItem("ln", lankN);
             // console.log(
             //   data.length,
             //   Math.ceil(data.length / offset),
             //   data.length%offset
             // );
             if (v+1==Math.ceil(data.length / offset)&&data.length%offset==1) {
-              let li = document.createElement("li");
-              li.href = "./works.html";
-              li.innerHTML = `<li><a></a>
-                <p>
-                  <span class="desc">Don't miss it.</span>
-                  <span class="price">0</span>
-                </p>`;
-              div.appendChild(li);
+              append_goods_html("goods_000.jpg", "Don't miss it.", "0", "", 0);
             }
             if (v+1==Math.ceil(data.length / offset)) {
               const e = document.getElementById("readmore_elem");
@@ -77,6 +63,29 @@
           }
         });
       sessionStorage.setItem("v", v+1);
+    }
+    function append_goods_html(file, desc, price, buylink, order_n = 0) {
+      const div = document.getElementById("div_goods_list");
+      let li = document.createElement("li");
+      if (order_n==0) {
+        li.href = "./works.html";
+        li.innerHTML = `<a class="goods_link"><img src="./goods/${file}"></a>
+          <p>
+            <span class="desc">${desc}</span>
+            <span class="price">${price}</span>
+            <a class="buy" href="${buylink}" target="_blank">BUY</a>
+          </p>`;
+      } else {
+        let span_class = (order_n<=3) ? "lank"+order_n : "lankN";
+        li.href = "./works.html";
+        li.innerHTML = `<a class="order_panel goods_link"><img src="./goods/${file}"><span class="order_n ${span_class}">${order_n}</span></a>
+          <p>
+            <span class="desc">${desc}</span>
+            <span class="price">${price}</span>
+            <a class="buy" href="${buylink}" target="_blank">BUY</a>
+          </p>`;
+      }
+      div.appendChild(li);
     }
   </script>
 </head>
