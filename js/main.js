@@ -1,5 +1,6 @@
 // 共有定数
-const SRVURL = "http://127.0.0.1:5500";
+const SRVURL = location.protocol + "//" + location.hostname + ":" + location.port;
+console.log(SRVURL);
 // const SRVURL = "https://yskliveserverpwrdbyggl.on.drv.tw/online/html_servers/rumble.com/";
 
 {
