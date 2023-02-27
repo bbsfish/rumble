@@ -2,6 +2,12 @@
   /* Barger Menu [bgmn] */
   --bgc-bgmn: #eeeeee;
   --barc-bgmn: #000000;
+
+  /* z-index */
+  --z-header_nav: 2000;
+  --z-h_logo: 5000;
+  --z-barger_menu_list: 1000;
+  --z-barger_menu_btn: 6000;
 }
 
 /* header */
@@ -16,6 +22,7 @@ header {
   height: 50px;
   background-color: var(--bgc-h);
   position: fixed;
+  z-index: var(--z-header_nav);
 }
 
 .h-nav-list-active {
@@ -33,7 +40,7 @@ header {
   height: 50px;
   background-color: var(--bgc-h);
   position: absolute;
-  z-index: 5000;
+  z-index: var(--z-h_logo);
 }
 
 .h-logo a {
@@ -64,7 +71,7 @@ header {
 }
 #barger-menu-list {
   position: absolute;
-  z-index: 1000;
+  z-index: var(--z-barger_menu_list);
   top: -250px;
   border-top: 1px solid var(--barc-bgmn);
   background-color: var(--bgc-bgmn);
@@ -91,7 +98,7 @@ header {
 /* barger menu btn */
 #barger-menu-btn {
   position: fixed;
-  z-index: 6000;
+  z-index: var(--z-barger_menu_btn);
   top: 4px;
   right: 10px;
   display: flex;

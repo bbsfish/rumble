@@ -2,6 +2,33 @@
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 
+:root {
+  /*
+    --type-place-supplement
+    <type>
+      fc=font color
+      bgc=background color
+      ac=accent color
+  */
+  --fc: #000000;
+  --fc-h: #000000;
+  --fc-h-hover: #ff0038;
+  --bgc: #eeeeee;
+  --bgc-h: #eeeeee;
+  --ac: #ff0038;
+  --h-base-color: #ff0038;
+  --h-nav-list-active: #ff0038;
+  --h-nav-bg: #eeeeee;
+  --m-header-main: rgb(0, 0, 0);
+  --m-tmlist-pg-active: #eeeeee;
+
+  --logo: #ff0038;
+
+  /* ページトップへ戻るボタン[gotop] */
+  --bgc-gotop-base: var(--ac);
+  --bgc-gotop-arrow: var(--bgc);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -40,35 +67,11 @@ body {
   width: 100%;
   font-family: 'Ubuntu Condensed', sans-serif, cursive;
   background-color: var(--bgc);
+  position: relative;
 }
 
 .wrap {
   overflow: hidden;
-}
-
-:root {
-  /*
-    --type-place-supplement
-    <type>
-      fc=font color
-      bgc=background color
-      ac=accent color
-  */
-  --fc: #000000;
-  --fc-h: #000000;
-  --fc-h-hover: #ff0038;
-  --bgc: #eeeeee;
-  --bgc-h: #eeeeee;
-  --ac: #ff0038;
-  --h-base-color: #ff0038;
-  --h-nav-list-active: #ff0038;
-  --h-nav-bg: #eeeeee;
-  --m-header-main: rgb(0, 0, 0);
-  --m-tmlist-pg-active: #eeeeee;
-  --m-bgcolor-1: #eeeeee;
-  --base-white: #eeeeee;
-
-  --logo: #ff0038;
 }
 
 img {
@@ -76,7 +79,7 @@ img {
 }
 
 main {
-  min-height: 80vw;
+  min-height: 80vh;
   background-color: var(--bgc);
 }
 
@@ -250,3 +253,39 @@ hr {
 .lank2 { background-color: rgb(129, 129, 129); }
 .lank3 { background-color: rgb(226, 141, 43); }
 .lankN { background-color: rgb(255, 255, 255); }
+
+
+/* PAGE TOP BTN */
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: calc(20vw / 2);
+  bottom: 15px;
+  background: var(--bgc-gotop-base);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: var(--bgc-gotop-arrow);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
