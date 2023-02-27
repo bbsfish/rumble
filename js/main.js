@@ -34,6 +34,11 @@ function setUseLang(lang) {
     }
 }
 
+function changelang(lang) {
+    console.log("changed to " + lang);
+    setUseLang(lang);
+}
+
 // Get URL Params
 function getprm(name, url) {
     if (!url) url = window.location.href;
