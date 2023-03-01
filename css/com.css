@@ -10,23 +10,18 @@
       bgc=background color
       ac=accent color
   */
-  --fc: #000000;
-  --fc-h: #000000;
-  --fc-h-hover: #ff0038;
-  --bgc: #eeeeee;
-  --bgc-h: #eeeeee;
-  --ac: #ff0038;
-  --h-base-color: #ff0038;
-  --h-nav-list-active: #ff0038;
-  --h-nav-bg: #eeeeee;
-  --m-header-main: rgb(0, 0, 0);
-  --m-tmlist-pg-active: #eeeeee;
+  --fc: #000000; /* ベースフォント */
+  --fc-h: #000000; /* ヘッダーのフォント */
+  --fc-h-hover: #ff0038; /* フォーカス時のヘッダーのフォント */
+  --bgc: #eeeeee; /* ページ全体の背景 */
+  --bgc-h: #eeeeee; /* ヘッダーの背景 */
+  --ac: #ff0038; /* アクセントカラー */
 
-  --logo: #ff0038;
+  --bgc-logo : #000000; /* ページ左上のロゴ背景 */
 
   /* ページトップへ戻るボタン[gotop] */
-  --bgc-gotop-base: var(--ac);
-  --bgc-gotop-arrow: var(--bgc);
+  --bgc-gotop-base: var(--ac); /* 背景 */
+  --bgc-gotop-arrow: var(--bgc); /* 矢印 */
 }
 
 *{
@@ -288,4 +283,10 @@ hr {
   left: 0;
   margin: auto;
   text-align: center;
+}
+
+/* test */
+#testlogo a{
+  background-image: url(../lib/rmbl.jpg);
+  background-size: 0.8em;
 }

@@ -36,28 +36,28 @@ header {
 
 /* header logo */
 .h-logo {
-  width: 100vw;
+  width: 50px;
   height: 50px;
   background-color: var(--bgc-h);
   position: absolute;
   z-index: var(--z-h_logo);
+  background-color: var(--bgc-logo);
+  text-align: left;
 }
-
 .h-logo a {
   font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
-  display: flex;
-  width: 105px;
+  width: 50px;
   height: 50px;
   color: var(--logo);
   position: relative;
-  align-items: center;
+  display: block;
 }
 
-.h-logo a span {
-  display: block;
-  padding: 0 5px;
-  font-size: 20px;
+#logo-img {
+  width: 50px;
+  height: 50px;
 }
+
 
 /* header nav */
 .h-nav-list {

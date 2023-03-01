@@ -5,7 +5,8 @@ console.log(SRVURL);
 
 {
     // 使用言語選択
-    const userlang = navigator.language;
+    // const userlang = navigator.language;
+    const userlang = "ja";
     console.log(userlang);
     setUseLang(userlang);
 }

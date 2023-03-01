@@ -3,29 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); */
 .m-header{
   background-color: rgb(94, 94, 94);
-  background-image: url("../lib/topwp.jpeg");
-  background-position: center;
   text-align: center;
-  background-size: cover;
   width: 100%;
-  height: 100vh;
-  -webkit-background-size: cover;
+  /* height: 100vh; */
+}
+.m-header-wallpaper {
+  background-image: url("../lib/topwp.jpeg");
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  height: 70vw;
   background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
   -o-background-size: cover;
 }
 
-.m-header h1{
+.m-header-wallpaper h1{
   width: 100%;
   text-align: center;
   font-size: 36px;
   font-weight: 300;
   color: rgba(255,255,255,0.7);
-  padding-top: calc(50vh - 100px);
+  padding-top: calc(35vw - 100px);
   padding-bottom: 60px;
   font-family: 'Dela Gothic One', cursive;
 }
 
-.m-header a {
+.m-header-wallpaper a {
   font-size: 24px;
   padding: 10px 20px;
   border: 1px solid black;
@@ -33,7 +38,30 @@
   border-radius: 30px;
   font-weight: 200;
 }
-.m-header a:hover {
+
+@media only screen and (max-width: 768px) {
+  .m-header-wallpaper h1{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    padding-top: calc(35vw - 50px);
+    padding-bottom: 40px;
+    font-family: 'Dela Gothic One', cursive;
+  }
+  
+  .m-header-wallpaper a {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 30px;
+    font-weight: 200;
+  }
+}
+
+.m-header-wallpaper a:hover {
   color: white;
   border: 1px solid white;
   transition-timing-function: ease-in;

@@ -5,14 +5,12 @@
     <Type>
       hrc=hr color
   */
-  --a-brdrc: var(--ac);
-  --a-hrc: var(--ac);
-  --a-bgc: var(--bgc);
-  --a-bgc-ctt: rgb(148, 148, 148);
-  --a-fc: var(--fc);
-  --a-fc-h2: var(--ac);
-  --a-fc-h3: var(--ac);
-  --a-fc-toggle: var(--fc);
+  --a-brdrc: var(--ac); /* 各項目のペインリストの外枠 */
+  --a-hrc: var(--ac); /* セクションの間仕切り線 */
+  --a-fc: var(--fc); /* 各項目の内部テキストフォント */
+  --a-fc-h2: var(--ac); /* 大（セクション）タイトルフォント */
+  --a-fc-h3: var(--ac); /* 中タイトルフォント */
+  --a-fc-toggle: var(--fc); /* 小タイトルフォント */
 
   /* forms */
   --f-bgc: rgb(148, 148, 148);

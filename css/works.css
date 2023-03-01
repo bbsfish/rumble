@@ -5,13 +5,13 @@
     <Type>
       brdrc=border color
   */
-  --w-brdrc-ctt: var(--ac);
-  --w-bgc: var(--bgc);
-  --w-bgc-ctt: rgb(148, 148, 148);
-  --w-fc: var(--fc);
-  --w-fc-h2: var(--ac);
-  --w-fc-buybtn: #eeeeee;
-  --w-bgc-buybtn: var(--ac);
+  --w-brdrc-ctt: var(--ac); /* 商品リストの外枠線 */
+  --w-bgc: var(--bgc); /* セクション（ページ全体）の背景 */
+  --w-bgc-ctt: rgb(148, 148, 148); /* 商品リストの背景 */
+  --w-fc: var(--fc); /* 商品リストの説明文フォント */
+  --w-fc-h2: var(--ac); /* セクションタイトル */
+  --w-fc-buybtn: #eeeeee; /* BUYボタンフォント */
+  --w-bgc-buybtn: var(--ac); /* BUYボタン背景 */
 }
 
 

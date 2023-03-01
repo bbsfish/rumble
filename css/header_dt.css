@@ -22,21 +22,22 @@ header {
 .h-logo {
   width: 105px;
   height: 50px;
+  text-align: center;
+  background-color: var(--bgc-logo);
 }
 
 .h-logo a {
   font-family: 'Questrial','Helvetica Neue',Arial, sans-serif;
-  display: flex;
   width: 105px;
   height: 50px;
   color: var(--logo);
+  display: block;
   align-items: center;
 }
 
-.h-logo a span {
-  display: block;
-  padding: 0 5px;
-  font-size: 25px;
+#logo-img {
+  width: 50px;
+  height: 50px;
 }
 
 /* header nav */
