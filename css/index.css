@@ -2,13 +2,13 @@
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); */
 .m-header{
-  background-color: rgb(94, 94, 94);
+  background-color: transparent;
   text-align: center;
   width: 100%;
   /* height: 100vh; */
 }
 .m-header-wallpaper {
-  background-image: url("../lib/topwp.jpeg");
+  /* background-image: url("../lib/topwp.jpeg"); */
   margin-left: auto;
   margin-right: auto;
   width: 70vw;
@@ -79,7 +79,7 @@ section {
   text-align: center;
   font-size: 30px;
   padding: 15px 0px;
-  color: var(--h-nav-list-active);
+  color: var(--fc);
 }
 
 .description {

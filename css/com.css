@@ -10,18 +10,21 @@
       bgc=background color
       ac=accent color
   */
-  --fc: #000000; /* ベースフォント */
+  --fc: #eeeeee; /* ベースフォント */
   --fc-h: #000000; /* ヘッダーのフォント */
-  --fc-h-hover: #ff0038; /* フォーカス時のヘッダーのフォント */
+  --fc-h-hover: rgb(212, 186, 178); /* フォーカス時のヘッダーのフォント */
   --bgc: #eeeeee; /* ページ全体の背景 */
   --bgc-h: #eeeeee; /* ヘッダーの背景 */
-  --ac: #ff0038; /* アクセントカラー */
+  --ac: #FF3E00; /* アクセントカラー */
+  --hrc: var(--bgc); /* セクションの間仕切り線 */
+  --subhrc: #000000; /* セクションの間仕切り線 */
 
   --bgc-logo : #000000; /* ページ左上のロゴ背景 */
+  --bgc-wallpaper: #FF3E00;
 
   /* ページトップへ戻るボタン[gotop] */
   --bgc-gotop-base: var(--ac); /* 背景 */
-  --bgc-gotop-arrow: var(--bgc); /* 矢印 */
+  --bgc-gotop-arrow: var(--ac); /* 矢印 */
 }
 
 *{
@@ -63,6 +66,9 @@ body {
   font-family: 'Ubuntu Condensed', sans-serif, cursive;
   background-color: var(--bgc);
   position: relative;
+  background-attachment: fixed;
+  background-image: url(../lib/wallpaper.jpg);
+  background-size: cover;
 }
 
 .wrap {
@@ -75,7 +81,8 @@ img {
 
 main {
   min-height: 80vh;
-  background-color: var(--bgc);
+  background-color: transparent;
+  /* background-color: var(--bgc); */
 }
 
 .invisible {  /* 非表示せってい */
@@ -197,8 +204,8 @@ footer.f-list-unstyled li a{
 hr {
   border: 0;
   height: 0;
-  border-top: 1px solid var(--h-base-color);
-  border-bottom: 1px solid var(--h-base-color);
+  border-top: 1px solid var(--hrc);
+  border-bottom: 1px solid var(--hrc);
   max-width: 120px;
   margin: auto;
   margin-bottom: 20px;
@@ -207,8 +214,8 @@ hr {
 .sub-hr {
   border: 0;
   height: 0;
-  border-top: 1px dashed var(--h-base-color);
-  border-bottom: 1px dashed var(--h-base-color);
+  border-top: 1px dashed var(--subhrc);
+  border-bottom: 1px dashed var(--subhrc);
   max-width: 100px;
   margin: auto;
   margin-bottom: 20px;
@@ -283,10 +290,4 @@ hr {
   left: 0;
   margin: auto;
   text-align: center;
-}
-
-/* test */
-#testlogo a{
-  background-image: url(../lib/rmbl.jpg);
-  background-size: 0.8em;
 }
