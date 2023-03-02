@@ -1,10 +1,16 @@
 /* @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); */
+:root {
+  --z-wallpaper_img: -1;
+  --i-fc-wallpaper: #ffffff;
+  --i-bc-wallpaper-hover: #FFCA00;
+}
 .m-header{
   background-color: transparent;
   text-align: center;
   width: 100%;
+  z-index: var(--z-m_header);
   /* height: 100vh; */
 }
 .m-header-wallpaper {
@@ -24,17 +30,17 @@
   text-align: center;
   font-size: 36px;
   font-weight: 300;
-  color: rgba(255,255,255,0.7);
+  color: var(--i-fc-wallpaper);
   padding-top: calc(35vw - 100px);
-  padding-bottom: 60px;
+  padding-bottom: 180px;
   font-family: 'Dela Gothic One', cursive;
 }
 
 .m-header-wallpaper a {
   font-size: 24px;
   padding: 10px 20px;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid var(--i-fc-wallpaper);
+  color: var(--i-fc-wallpaper);
   border-radius: 30px;
   font-weight: 200;
 }
@@ -62,10 +68,16 @@
 }
 
 .m-header-wallpaper a:hover {
-  color: white;
-  border: 1px solid white;
+  color: var(--i-fc-wallpaper);
+  border: 1px solid var(--i-bc-wallpaper-hover);
   transition-timing-function: ease-in;
   transition-duration: 0.2s;
+}
+
+.wallpaper-img {
+  z-index: var(--z-wallpaper_img);
+  width: 100%;
+  position: absolute;
 }
 
 /* section */
@@ -86,7 +98,7 @@ section {
   text-align: center;
   font-size: 18px;
   padding: 15px 0px;
-  color: #000000;
+  color: var(--fc);
 }
 
 /* highlights img-list */

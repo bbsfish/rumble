@@ -12,7 +12,7 @@
   */
   --fc: #eeeeee; /* ベースフォント */
   --fc-h: #000000; /* ヘッダーのフォント */
-  --fc-h-hover: rgb(212, 186, 178); /* フォーカス時のヘッダーのフォント */
+  --fc-h-hover: #FF3E00; /* フォーカス時のヘッダーのフォント */
   --bgc: #eeeeee; /* ページ全体の背景 */
   --bgc-h: #eeeeee; /* ヘッダーの背景 */
   --ac: #FF3E00; /* アクセントカラー */
@@ -67,8 +67,9 @@ body {
   background-color: var(--bgc);
   position: relative;
   background-attachment: fixed;
-  background-image: url(../lib/wallpaper.jpg);
+  /* background-image: url(../lib/wallpaper.jpg); */
   background-size: cover;
+  background-position: bottom;
 }
 
 .wrap {
@@ -228,7 +229,7 @@ hr {
   width: 150px;
   height: 30px;
   font-size: 1.0em;
-  color: var(--w-brdrc-ctt);
+  color: var(--fc);
   /* background-color: red; */
   text-align: center;
   margin-left: calc((100% - 150px) / 2);

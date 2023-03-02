@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
   <link rel="icon" href="favicon.png">
+  <script src="./js/rellax.min.js" defer></script>
   <title>Rumble Official</title>
   <script>
     window.addEventListener("load", ()=>{
@@ -51,6 +52,8 @@
   </script>
 </head>
 <body>
+  <!-- parallax contents -->
+  <img src="./lib/wallpaper.jpg" alt="our symbol image" id="wallpaper" class="wallpaper-img js-rellax" data-rellax-zindex="-1000">
   <!-- header -->
   <!-- %#HEADER% -->
   <header id="header">
@@ -150,5 +153,6 @@
 <div id="page_top"><a href="#header"></a></div>
 <script src="./js/main.js"></script>
 <script src="./lib/load.js"></script>
+<script src="./js/parallax.js"></script>
 </body>
 </html>
