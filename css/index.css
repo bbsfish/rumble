@@ -6,6 +6,19 @@
   --i-fc-wallpaper: #ffffff;
   --i-bc-wallpaper-hover: #FFCA00;
 }
+
+body {
+  width: 100%;
+  font-family: 'Ubuntu Condensed', sans-serif, cursive;
+  background-color: var(--bgc);
+  position: relative;
+  background-attachment: fixed;
+  background-image: url(../lib/wallpaper.jpg);
+  background-size: auto 1000px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
 .m-header{
   background-color: transparent;
   text-align: center;
