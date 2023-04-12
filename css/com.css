@@ -13,7 +13,7 @@
   --fc: #eeeeee; /* ベースフォント */
   --fc-h: #000000; /* ヘッダーのフォント */
   --fc-h-hover: #FF3E00; /* フォーカス時のヘッダーのフォント */
-  --bgc: #eeeeee; /* ページ全体の背景 */
+  --bgc: #FF3E00; /* ページ全体の背景 */
   --bgc-h: #eeeeee; /* ヘッダーの背景 */
   --ac: #FF3E00; /* アクセントカラー */
   --hrc: var(--bgc); /* セクションの間仕切り線 */
@@ -24,7 +24,7 @@
 
   /* ページトップへ戻るボタン[gotop] */
   --bgc-gotop-base: var(--ac); /* 背景 */
-  --bgc-gotop-arrow: var(--ac); /* 矢印 */
+  --bgc-gotop-arrow: var(--fc); /* 矢印 */
 }
 
 *{
@@ -43,11 +43,14 @@ li {
 a {
   text-decoration: none;
   list-style-type:none;
-  color: var(--fc);
   font-size: inherit;
 }
 a:hover {
   text-decoration: underline;
+}
+a:visited {
+  font-size: inherit;
+  color: inherit;
 }
 
 button{
@@ -66,10 +69,6 @@ body {
   font-family: 'Ubuntu Condensed', sans-serif, cursive;
   background-color: var(--bgc);
   position: relative;
-  background-attachment: fixed;
-  /* background-image: url(../lib/wallpaper.jpg); */
-  background-size: cover;
-  background-position: bottom;
 }
 
 .wrap {
@@ -83,7 +82,6 @@ img {
 main {
   min-height: 80vh;
   background-color: transparent;
-  /* background-color: var(--bgc); */
 }
 
 .invisible {  /* 非表示せってい */
@@ -97,7 +95,7 @@ span {
 
 /* footer */
 footer {
-  background-color: var(--bgc);
+  background-color: var(--bgc-h);
   width: 100%;
   max-width: 80vw;
   height: 110px;
@@ -114,6 +112,9 @@ footer {
   footer{
     height: 150px;
     position: relative;
+    margin: 0;
+    width: 100%;
+    max-width: none;
   }
   footer nav:first-child(2){
     position: absolute;
@@ -152,7 +153,7 @@ footer nav:last-child {
 
 
 footer h4 {
-  border-bottom: var(--base-white) solid 1px;
+  border-bottom: var(--fc-h) solid 1px;
   font-size: 20px;
   color: var(--h-nav-list-active);
   margin-bottom: 10px;
@@ -162,7 +163,7 @@ footer h4 {
 
 footer.f-list-unstyled li a{
   font-size: 15px;
-  color: var(--base-white);
+  color: var(--fc-h);
 }
 
 
@@ -255,7 +256,7 @@ hr {
 .lank1 { background-color: rgb(226, 214, 43); }
 .lank2 { background-color: rgb(129, 129, 129); }
 .lank3 { background-color: rgb(226, 141, 43); }
-.lankN { background-color: rgb(255, 255, 255); }
+.lankN { background-color: rgb(0, 0, 0); }
 
 
 /* PAGE TOP BTN */
