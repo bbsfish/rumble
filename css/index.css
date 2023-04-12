@@ -80,6 +80,12 @@
   position: absolute;
 }
 
+@media(max-width: 768px) {
+  .wallpaper-img {
+    display: none;
+  }
+}
+
 /* section */
 section {
   background-color: var(--m-bgcolor-1);

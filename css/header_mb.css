@@ -90,6 +90,7 @@ header {
   text-align: left;
   margin-left: 10px;
   font-size: 14px;
+  color: var(--fc-h);
 }
 #barger-menu-list ul li:last-child {
   margin-top: 20px;
