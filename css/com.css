@@ -68,25 +68,9 @@ body {
   position: relative;
   background-attachment: fixed;
   /* background-image: url(../lib/wallpaper.jpg); */
-  background-size: 100vw auto;
+  background-size: cover;
   background-position: bottom;
-  background-repeat: no-repeat;
 }
-
-@media(max-width: 768px) {
-  body {
-    width: 100%;
-    font-family: 'Ubuntu Condensed', sans-serif, cursive;
-    background-color: var(--bgc);
-    position: relative;
-    background-attachment: fixed;
-    background-image: url(../lib/wallpaper.jpg);
-    background-size: 100vw auto;
-    background-position: top;
-    background-repeat: no-repeat;
-  }
-}
-
 
 .wrap {
   overflow: hidden;

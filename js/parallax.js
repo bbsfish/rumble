@@ -8,19 +8,15 @@ const allHeight = Math.max(
 
 const elemHeight = elem.offsetHeight;
 const maxScrollVolume = elemHeight - window.innerHeight;
-console.log(maxScrollVolume);
-    document.addEventListener("scroll", function(){
-        const currentScrollVolume = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScrollVolume >= maxScrollVolume) {
-            // elem.style.top = (currentScrollVolume - maxScrollVolume) + "px";
-            elem.style.display = "none";
-            document.body.style.backgroundImage = "url(./lib/wallpaper.jpg)";
-        } else if (currentScrollVolume < maxScrollVolume) {
-            elem.style.display = "block";
-            document.body.style.backgroundImage = "";
-        }
-    });
 
-// document.addEventListener("scroll", function(){
-//     console.log(elem.offsetHeight);
-// });
+document.addEventListener("scroll", function(){
+    const currentScrollVolume = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollVolume >= maxScrollVolume) {
+        // elem.style.top = (currentScrollVolume - maxScrollVolume) + "px";
+        elem.style.display = "none";
+        document.body.style.backgroundImage = "url(./lib/wallpaper.jpg)";
+    } else if (currentScrollVolume < maxScrollVolume) {
+        elem.style.display = "block";
+        document.body.style.backgroundImage = "";
+    }
+});
